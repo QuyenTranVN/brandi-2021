@@ -5,14 +5,12 @@
 // Default
 $color-default: #f2f2f2;
 $color-default-lightest: #fff;
-$color-default-lighter: #c2c2c2;
+$color-default-lighter: #bdc0c2;
 $color-default-darker: #acacac;
 $color-default-darkest: #000;
 $color-default-dark: #111111;
-
 // Primary colors
-$color-primary: #EE295F;
-
+$color-primary: #ee295f;
 // Success colors
 $color-success: #00a849;
 
@@ -21,18 +19,18 @@ $color-warning: #ffc700;
 
 // Danger
 $color-danger: #f54747;
-
+// Background
+$background: #0e2c2a;
 //colors
 $whiteish: #f2f2f2;
-$pink: #E96F92;
-$purple: #75517D;
-$green: #54fad4;
-
+$pink: #e96f92;
+$purple: #75517d;
+$green: #0eb493;
 //options
 $duration: 0.8s;
-$ease-in-out: cubic-bezier(0.445, 0.050, 0.550, 0.950);
-$ease-in: cubic-bezier(0.470, 0.000, 0.745, 0.715);
-$ease-out: cubic-bezier(0.390, 0.575, 0.565, 1.000);
+$ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
+$ease-in: cubic-bezier(0.47, 0, 0.745, 0.715);
+$ease-out: cubic-bezier(0.39, 0.575, 0.565, 1);
 $size: 20px;
 $hsize: $size/2;
 
