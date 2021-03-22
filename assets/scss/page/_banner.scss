@@ -1,0 +1,47 @@
+.banner {
+	&__container {
+		position: relative;
+	}
+	&____pics {
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__text {
+		font-family: "Open Sans", sans-serif;
+		max-width: 1170px;
+		position: absolute;
+		top: 50%;
+		transform: translateX(-50%);
+		left: 50%;
+		&__title {
+			text-align: center;
+			font-size: 62px;
+			font-weight: 300;
+			color: $color-default;
+		}
+		&__paragraph {
+			font-size: 48px;
+			color: $color-default-lighter;
+			font-weight: 300;
+			position: relative;
+			span {
+				color: $green;
+			}
+			&:after {
+				content: "";
+				height: 2px;
+				width: 50px;
+				position: absolute;
+				top: 20px;
+				background: $background;
+			}
+		}
+		&__small {
+			color: $color-default-lighter;
+			font-size: 18px;
+			text-align: center;
+		}
+	}
+}

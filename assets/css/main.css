@@ -7488,6 +7488,7 @@ header .navbar {
   position: fixed;
   width: 100%;
   background: #0e2c2a;
+  z-index: 10;
 }
 
 header .navbar__container {
@@ -7544,10 +7545,6 @@ header .navbar__menu {
           justify-content: space-between;
 }
 
-header .navbar__menu__item {
-  width: 100%;
-}
-
 header .navbar__menu__links {
   font-family: "Open Sans", sans-serif;
   font-size: 13px;
@@ -7562,12 +7559,14 @@ header .navbar__menu__links {
       -ms-flex-pack: center;
           justify-content: center;
   text-decoration: none;
-  height: 100%;
+  height: 70px;
   cursor: pointer;
 }
 
 header .navbar__menu__links:hover {
   color: #fff;
+  border-top: 1px solid;
+  border-color: #0eb493;
 }
 
 header .navbar__burger {
@@ -7693,5 +7692,57 @@ header .navbar__burger .burger {
 .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-9px, -6px);
           transform: rotate(45deg) translate(-9px, -6px);
+}
+
+.banner__container {
+  position: relative;
+}
+
+.banner____pics img {
+  width: 100%;
+  height: auto;
+}
+
+.banner__text {
+  font-family: "Open Sans", sans-serif;
+  max-width: 1170px;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+}
+
+.banner__text__title {
+  text-align: center;
+  font-size: 62px;
+  font-weight: 300;
+  color: #f2f2f2;
+}
+
+.banner__text__paragraph {
+  font-size: 48px;
+  color: #bdc0c2;
+  font-weight: 300;
+  position: relative;
+}
+
+.banner__text__paragraph span {
+  color: #0eb493;
+}
+
+.banner__text__paragraph:after {
+  content: "";
+  height: 2px;
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  background: #0e2c2a;
+}
+
+.banner__text__small {
+  color: #bdc0c2;
+  font-size: 18px;
+  text-align: center;
 }
 /*# sourceMappingURL=main.css.map */
