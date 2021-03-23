@@ -7,7 +7,7 @@
   note: All CSS3 Properties are being supported by Safari 5
   more info: http://www.findmebyip.com/litmus/#css3-properties
 ------------------------------------------------------------- */
-.no-gutter > [class*='col-'] {
+.no-gutter > [class*="col-"] {
   padding-right: 0;
   padding-left: 0;
 }
@@ -7487,7 +7487,7 @@ header .navbar {
           align-items: center;
   position: fixed;
   width: 100%;
-  background: #0e2c2a;
+  background-color: rgba(14, 44, 42, 0.4);
   z-index: 10;
 }
 
@@ -7519,7 +7519,7 @@ header .navbar__logo #navbar__logo {
   font-family: "Pacifico", cursive;
   text-decoration: none;
   font-size: 28px;
-  margin-right: 19px;
+  margin-right: 5px;
 }
 
 header .navbar__logo__text {
@@ -7561,6 +7561,7 @@ header .navbar__menu__links {
   text-decoration: none;
   height: 70px;
   cursor: pointer;
+  border-top: 1px solid transparent;
 }
 
 header .navbar__menu__links:hover {
@@ -7606,16 +7607,15 @@ header .navbar__burger .burger {
     position: relative;
   }
   header .navbar__logo {
-    width: 100%;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
   }
   header .navbar__menu {
     position: absolute;
-    height: 500px;
+    height: 300px;
     top: 70px;
-    background: #0e2c2a;
+    background: rgba(14, 44, 42, 0.4);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7639,6 +7639,10 @@ header .navbar__burger .burger {
     font-size: 16px;
     border: 1px solid;
     border-top: none;
+    height: 100%;
+  }
+  header .navbar__menu__links:hover {
+    background: #0eb493;
   }
   header .navbar__menu__item {
     opacity: 0;
@@ -7680,6 +7684,49 @@ header .navbar__burger .burger {
   }
 }
 
+@media only screen and (max-width: 375px) {
+  header .navbar {
+    height: 40px;
+  }
+  header .navbar__logo {
+    height: 40px;
+    width: 200px;
+  }
+  header .navbar__logo h1 {
+    width: 70px;
+  }
+  header .navbar__logo__text {
+    font-size: 10px;
+    padding-left: 10px;
+  }
+  header .navbar__menu {
+    height: 145px;
+    top: 40px;
+  }
+  header .navbar__menu__links {
+    font-size: 12px;
+  }
+  header .navbar__burger {
+    height: 40px;
+  }
+  header .navbar__burger .burger {
+    width: 20px;
+    height: 2px;
+    margin: 2px;
+  }
+  header .toggle .line1 {
+    -webkit-transform: rotate(-45deg) translate(-3px, 6px);
+            transform: rotate(-45deg) translate(-3px, 6px);
+  }
+  header .toggle .line2 {
+    opacity: 0;
+  }
+  header .toggle .line3 {
+    -webkit-transform: rotate(45deg) translate(-3px, -6px);
+            transform: rotate(45deg) translate(-3px, -6px);
+  }
+}
+
 .toggle .line1 {
   -webkit-transform: rotate(-45deg) translate(-9px, 6px);
           transform: rotate(-45deg) translate(-9px, 6px);
@@ -7694,11 +7741,19 @@ header .navbar__burger .burger {
           transform: rotate(45deg) translate(-9px, -6px);
 }
 
-.banner__container {
+.banner {
   position: relative;
 }
 
-.banner____pics img {
+.banner__contain {
+  display: none;
+}
+
+.banner__pics {
+  position: relative;
+}
+
+.banner__pics img {
   width: 100%;
   height: auto;
 }
@@ -7707,10 +7762,14 @@ header .navbar__burger .burger {
   font-family: "Open Sans", sans-serif;
   max-width: 1170px;
   position: absolute;
-  top: 50%;
+  bottom: 172px;
   -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   left: 50%;
+  line-height: 1;
+  margin-bottom: 10px;
+  text-align: center;
+  width: 100%;
 }
 
 .banner__text__title {
@@ -7718,31 +7777,170 @@ header .navbar__burger .burger {
   font-size: 62px;
   font-weight: 300;
   color: #f2f2f2;
+  margin-bottom: 10px;
 }
 
-.banner__text__paragraph {
+.banner__text__content {
   font-size: 48px;
   color: #bdc0c2;
   font-weight: 300;
-  position: relative;
+  margin-bottom: 15px;
 }
 
-.banner__text__paragraph span {
+.banner__text__content span {
   color: #0eb493;
 }
 
-.banner__text__paragraph:after {
-  content: "";
-  height: 2px;
-  width: 50px;
-  position: absolute;
-  top: 20px;
-  background: #0e2c2a;
-}
-
 .banner__text__small {
+  position: relative;
   color: #bdc0c2;
   font-size: 18px;
-  text-align: center;
+  z-index: 2;
+  display: inline-block;
+}
+
+.banner__text__small:before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #0eb493;
+  position: absolute;
+  bottom: 6px;
+  left: -40px;
+  z-index: 1;
+}
+
+.banner__text__small:after {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #0eb493;
+  position: absolute;
+  bottom: 6px;
+  right: -40px;
+  z-index: 1;
+}
+
+.banner__contact {
+  position: absolute;
+  font-size: 20px;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  color: #bdc0c2;
+}
+
+.banner__contact i {
+  cursor: pointer;
+  margin: 5px;
+}
+
+.banner__contact i:hover {
+  color: #f2f2f2;
+}
+
+.banner__dots {
+  position: absolute;
+  right: 50px;
+  top: 50%;
+}
+
+.banner__dots .dot {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 10px;
+  width: 10px;
+  margin: 10px 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.6s ease;
+  transition: background-color 0.6s ease;
+}
+
+.banner__dots .active {
+  background: #f2f2f2;
+}
+
+.banner .fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.5s;
+  animation-name: fade;
+  animation-duration: 2.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.2;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .banner__text {
+    bottom: 120px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .banner__text {
+    bottom: 80px;
+  }
+  .banner__text__title {
+    font-size: 40px;
+    margin-bottom: 5px;
+  }
+  .banner__text__content {
+    font-size: 30px;
+    margin-bottom: 5px;
+  }
+  .banner__text__small {
+    font-size: 14px;
+  }
+  .banner__contact {
+    font-size: 14px;
+    bottom: 30px;
+  }
+  .banner__dots .dot {
+    height: 7px;
+    width: 7px;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .banner__text {
+    bottom: 30px;
+  }
+  .banner__text__title {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+  .banner__text__content {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+  .banner__text__small {
+    font-size: 10px;
+  }
+  .banner__contact {
+    font-size: 10px;
+    bottom: 10px;
+  }
+  .banner__dots .dot {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

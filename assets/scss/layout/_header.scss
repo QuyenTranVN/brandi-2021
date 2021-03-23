@@ -4,7 +4,7 @@ header {
 		align-items: center;
 		position: fixed;
 		width: 100%;
-		background: $background;
+		background-color: $background-header;
 		z-index: 10;
 		&__container {
 			width: 90%;
@@ -23,7 +23,7 @@ header {
 				font-family: "Pacifico", cursive;
 				text-decoration: none;
 				font-size: 28px;
-				margin-right: 19px;
+				margin-right: 5px;
 			}
 			&__text {
 				color: $color-default;
@@ -53,6 +53,7 @@ header {
 				text-decoration: none;
 				height: 70px;
 				cursor: pointer;
+				border-top: 1px solid transparent;
 				&:hover {
 					color: $color-default-lightest;
 					border-top: 1px solid;
@@ -93,14 +94,13 @@ header {
 		position: relative;
 		.navbar {
 			&__logo {
-				width: 100%;
 				justify-content: center;
 			}
 			&__menu {
 				position: absolute;
-				height: 500px;
+				height: 300px;
 				top: 70px;
-				background: $background;
+				background: $background-header;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
@@ -112,6 +112,10 @@ header {
 					font-size: 16px;
 					border: 1px solid;
 					border-top: none;
+					height: 100%;
+					&:hover {
+						background: $green;
+					}
 				}
 				&__item {
 					opacity: 0;
@@ -138,7 +142,48 @@ header {
 		}
 	}
 }
-
+@media only screen and (max-width: 375px) {
+	header {
+		.navbar {
+			height: 40px;
+			&__logo {
+				height: 40px;
+				width: 200px;
+				h1 {
+					width: 70px;
+				}
+				&__text {
+					font-size: 10px;
+					padding-left: 10px;
+				}
+			}
+			&__menu {
+				height: 145px;
+				top: 40px;
+				&__links {
+					font-size: 12px;
+				}
+			}
+			&__burger {
+				height: 40px;
+				.burger {
+					width: 20px;
+					height: 2px;
+					margin: 2px;
+				}
+			}
+		}
+		.toggle .line1 {
+			transform: rotate(-45deg) translate(-3px, 6px);
+		}
+		.toggle .line2 {
+			opacity: 0;
+		}
+		.toggle .line3 {
+			transform: rotate(45deg) translate(-3px, -6px);
+		}
+	}
+}
 .toggle .line1 {
 	transform: rotate(-45deg) translate(-9px, 6px);
 }
