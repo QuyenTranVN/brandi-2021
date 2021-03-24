@@ -1,3 +1,5 @@
+// const $ = document.querySelector.bind(document);
+// const $$ = document.querySelectorAll.bind(document);
 const navbarSlide = () => {
 	const burger = document.querySelector(".navbar__burger");
 	const navbar = document.querySelector(".navbar__menu");
@@ -11,8 +13,8 @@ const navbarSlide = () => {
 			if (link.style.animation) {
 				link.style.animation = "";
 			} else {
-				link.style.animation = `navLinkFade 0.5s ease forwards 
-      ${index / 3 + 0.5}s`;
+				link.style.animation = `navLinkFade 0.2s ease forwards 
+      ${index / 7 + 0.1}s`;
 			}
 		});
 		// burger animation
@@ -55,3 +57,18 @@ function showSlides(n) {
 	slides[slideIndex - 1].style.display = "block";
 	dots[slideIndex - 1].className += " active";
 }
+// ======================= features======================
+const tabs = document.querySelectorAll(".feature__dot");
+const contents = document.querySelectorAll(".bottom__box");
+
+tabs.forEach((tab, index) => {
+	const content = contents[index];
+
+	tab.onclick = function () {
+		document.querySelector(".feature__dot.active").classList.remove("active");
+		document.querySelector(".bottom__box.active").classList.remove("active");
+
+		this.classList.add("active");
+		content.classList.add("active");
+	};
+});

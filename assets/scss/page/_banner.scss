@@ -104,13 +104,14 @@
 	}
 	.fade {
 		-webkit-animation-name: fade;
-		-webkit-animation-duration: 2.5s;
+		-webkit-animation-duration: 2s;
 		animation-name: fade;
-		animation-duration: 2.5s;
+		animation-duration: 2s;
+		transition: ease;
 	}
 	@-webkit-keyframes fade {
 		from {
-			opacity: 0.2;
+			opacity: 0.5;
 		}
 		to {
 			opacity: 1;
@@ -118,7 +119,7 @@
 	}
 	@keyframes fade {
 		from {
-			opacity: 0.2;
+			opacity: 0.5;
 		}
 		to {
 			opacity: 1;
@@ -174,6 +175,12 @@
 			}
 			&__small {
 				font-size: 10px;
+				&:after {
+					bottom: 3px;
+				}
+				&:before {
+					bottom: 3px;
+				}
 			}
 		}
 		&__contact {

@@ -1,0 +1,222 @@
+.feature {
+	width: 100%;
+	position: relative;
+	height: 460px;
+	background: $background-feature;
+	&__container {
+		overflow: hidden;
+		max-width: 1170px;
+		width: 100%;
+		margin: auto;
+	}
+	&__top {
+		text-align: center;
+		&__title {
+			font-size: 28px;
+			color: $green;
+			font-weight: 400;
+			margin-bottom: 25px;
+			padding-top: 78px;
+		}
+		&__heart {
+			position: relative;
+			margin-bottom: 64px;
+			&:before {
+				position: absolute;
+				content: "";
+				left: 40%;
+				bottom: 50%;
+				width: 80px;
+				height: 1px;
+				background: $color-default-darker;
+			}
+			&:after {
+				position: absolute;
+				content: "";
+				right: 40%;
+				bottom: 50%;
+				width: 80px;
+				height: 1px;
+				background: $color-default-darker;
+			}
+		}
+	}
+
+	&__bottom {
+		.bottom__box {
+			max-width: 1170px;
+			display: flex;
+			justify-content: space-between;
+
+			.bottom__content {
+				transition: all 0.4s ease;
+				display: flex;
+				align-items: flex-start;
+				justify-content: space-between;
+				&__text {
+					width: 80%;
+				}
+				&__brand {
+					padding-bottom: 15px;
+					font-size: 20px;
+					font-weight: 400;
+				}
+				&__disc {
+					font-size: 13px;
+					color: $color-default-darker;
+					line-height: 1.4;
+				}
+			}
+			.bottom__content__feather {
+				margin-left: 25px;
+				margin-top: 5px;
+				border: 1px solid;
+				border-radius: 50%;
+				border-color: $green;
+				padding: 6px;
+				width: 20px;
+				height: 20px;
+			}
+		}
+		.bottom__row {
+			display: none;
+		}
+	}
+	&__dots {
+		position: absolute;
+		right: 50%;
+		transform: translateX(50%);
+		bottom: 54px;
+		display: flex;
+		transition: all 0.4s ease;
+		.active {
+			background: $color-default-darkest;
+		}
+	}
+	&__dot {
+		cursor: pointer;
+		display: flex;
+		height: 8px;
+		width: 8px;
+		margin: 5px;
+		border: 1px solid;
+		border-color: $color-default-lighter;
+		border-radius: 50%;
+		transition: background-color 0.6s ease;
+	}
+	.active {
+		display: flex;
+	}
+}
+@media only screen and (max-width: 1024px) {
+	.feature {
+		&__top {
+			&__heart {
+				&:after {
+					width: 60px;
+				}
+				&:before {
+					width: 60px;
+				}
+			}
+		}
+		&__bottom {
+			max-width: 900px;
+			margin: auto;
+			.bottom__content {
+				.bottom__content__feather {
+					margin-left: 0;
+				}
+			}
+		}
+		&__dots {
+			bottom: 35px;
+		}
+	}
+}
+@media only screen and (max-width: 768px) {
+	.feature {
+		&__container {
+			width: 90%;
+		}
+		&__top {
+			&__title {
+				margin-bottom: 10px;
+			}
+			&__heart {
+				&:after {
+					width: 40px;
+				}
+				&:before {
+					width: 40px;
+				}
+			}
+		}
+		&__bottom {
+			max-width: 900px;
+			margin: auto;
+			.bottom__content {
+				.bottom__content__feather {
+					width: 15px;
+					height: 15px;
+					margin-left: 0;
+				}
+			}
+		}
+		&__dots {
+			bottom: 30px;
+		}
+	}
+}
+@media only screen and (max-width: 375px) {
+	.feature {
+		height: 100%;
+		&__container {
+			width: 80%;
+		}
+		&__top {
+			&__title {
+				padding-top: 35px;
+				font-size: 16px;
+				margin-bottom: 10px;
+			}
+			&__heart {
+				margin-bottom: 15px;
+				&:after {
+					width: 15px;
+				}
+				&:before {
+					width: 15px;
+				}
+			}
+		}
+		&__bottom {
+			max-width: 900px;
+			margin: auto;
+			.bottom__content {
+				.bottom__content__feather {
+					width: 15px;
+					height: 15px;
+					margin-left: 0;
+				}
+			}
+			.bottom__content__text {
+				.bottom__content__brand {
+					font-size: 16px;
+					padding-bottom: 3px;
+				}
+				.bottom__content__disc {
+					font-size: 12px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&__dots {
+			display: none;
+		}
+	}
+	.active {
+		display: flex;
+		flex-direction: column;
+	}
+}
