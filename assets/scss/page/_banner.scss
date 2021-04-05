@@ -1,0 +1,171 @@
+.banner {
+	position: relative;
+	&__contain {
+		display: none;
+	}
+	&__pics {
+		height: 800px;
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		img {
+			display: block;
+			width: 100%;
+			height: auto;
+		}
+	}
+	&__text {
+		font-family: "Open Sans", sans-serif;
+		max-width: 1170px;
+		position: absolute;
+		bottom: 172px;
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+		left: 50%;
+		line-height: 1;
+		margin-bottom: 10px;
+		text-align: center;
+		width: 100%;
+		@media #{$ipad-pro} {
+			bottom: 120px;
+		}
+		@media #{$ipad} {
+			bottom: 80px;
+		}
+		@media #{$phone} {
+			bottom: 50px;
+		}
+		&__title {
+			text-align: center;
+			font-size: 62px;
+			font-weight: 300;
+			color: #f2f2f2;
+			margin-bottom: 10px;
+			@media #{$ipad} {
+				font-size: 40px;
+				margin-bottom: 5px;
+			}
+			@media #{$phone} {
+				font-size: 30px;
+				margin-bottom: 0;
+			}
+		}
+		&__content {
+			font-size: 48px;
+			color: #bdc0c2;
+			font-weight: 300;
+			margin-bottom: 15px;
+			@media #{$ipad} {
+				font-size: 30px;
+				margin-bottom: 5px;
+			}
+			@media #{$phone} {
+				font-size: 22px;
+				margin-bottom: 0;
+			}
+			span {
+				color: $green;
+			}
+		}
+		&__line {
+			display: inline-flex;
+			.line {
+				width: 40px;
+				height: 1px;
+				background-color: $green;
+				margin: 10px 10px;
+				@media #{$phone} {
+					width: 20px;
+					margin: 6px 10px;
+				}
+			}
+		}
+
+		&__small {
+			position: relative;
+			color: #bdc0c2;
+			font-size: 18px;
+			z-index: 2;
+			display: inline-block;
+			@media #{$ipad} {
+				font-size: 14px;
+			}
+			@media #{$phone} {
+				font-size: 10px;
+			}
+		}
+	}
+	&__contact {
+		position: absolute;
+		font-size: 20px;
+		bottom: 50px;
+		left: 50%;
+		transform: translateX(-50%);
+		color: $color-default-lighter;
+		@media #{$ipad} {
+			font-size: 14px;
+			bottom: 40px;
+		}
+		@media #{$phone} {
+			font-size: 12px;
+			bottom: 20px;
+		}
+		i {
+			cursor: pointer;
+			margin: 5px;
+
+			&:hover {
+				color: $color-default;
+			}
+		}
+	}
+
+	&__dots {
+		position: absolute;
+		right: 50px;
+		top: 50%;
+		.dot {
+			cursor: pointer;
+			display: flex;
+			height: 10px;
+			width: 10px;
+			margin: 10px 2px;
+			background-color: #bbb;
+			border-radius: 50%;
+			transition: background-color 0.6s ease;
+			@media #{$ipad} {
+				height: 7px;
+				width: 7px;
+			}
+			@media #{$phone} {
+				display: none;
+			}
+		}
+		.active {
+			background: $color-default;
+		}
+	}
+	.fade {
+		-webkit-animation-name: fade;
+		-webkit-animation-duration: 2s;
+		animation-name: fade;
+		animation-duration: 2s;
+		transition: ease;
+	}
+	@-webkit-keyframes fade {
+		from {
+			opacity: 0.5;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+	@keyframes fade {
+		from {
+			opacity: 0.5;
+		}
+		to {
+			opacity: 1;
+		}
+	}
+}
