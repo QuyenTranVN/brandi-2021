@@ -592,3 +592,57 @@
 	display: -webkit-flex;
 	display: flex;
 }
+
+@mixin line {
+	.lines {
+		margin-top: 18px;
+		display: inline-flex;
+		.line {
+			opacity: 0.3;
+			width: 80px;
+			top: 9px;
+			left: 20px;
+			height: 1px;
+			margin: 6px 12px;
+			background-color: $color-default-lighter;
+		}
+	}
+}
+
+@mixin slick-dot {
+	.slick-dots {
+		display: flex;
+		justify-content: center;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		.slick-active,
+		.slick-active button {
+			background: $color-default-darkest;
+		}
+		margin: 0;
+		list-style-type: none;
+		li {
+			cursor: pointer;
+			height: 8px;
+			width: 8px;
+			border: 1px solid #333b3f;
+			border-radius: 50%;
+			display: inline-block;
+			transition: background-color 0.3s ease;
+			overflow: hidden;
+			margin: 0 7px;
+		}
+		button {
+			font-size: 0;
+			display: none;
+		}
+	}
+}
+@mixin title {
+	.title {
+		color: $green;
+		font-size: 28px;
+	}
+}

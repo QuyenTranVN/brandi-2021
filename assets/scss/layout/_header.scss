@@ -1,4 +1,8 @@
 header {
+	@media #{$ipad-pro} {
+		z-index: 10;
+		position: relative;
+	}
 	.navbar {
 		height: 70px;
 		align-items: center;
@@ -6,6 +10,7 @@ header {
 		width: 100%;
 		background-color: $background-header;
 		z-index: 10;
+		transition: 0.4s ease;
 		&__container {
 			width: 90%;
 			height: 70px;
@@ -13,6 +18,14 @@ header {
 			justify-content: space-between;
 			display: flex;
 			margin: auto;
+			.navbar__active {
+				@media #{$ipad} {
+					transform: translateX(0%);
+				}
+			}
+			@media #{$ipad-pro} {
+				max-width: 900px;
+			}
 		}
 		&__logo {
 			display: flex;
@@ -25,6 +38,9 @@ header {
 				font-size: 28px;
 				margin-right: 5px;
 			}
+			// @media #{$ipad-pro} {
+			// 	width: unset;
+			// }
 			&__text {
 				color: $color-default;
 				font-size: 13px;
@@ -35,15 +51,51 @@ header {
 				border-color: $green;
 			}
 		}
+
 		&__menu {
 			display: flex;
 			align-items: center;
 			list-style: none;
 			width: 358px;
 			justify-content: space-between;
-			// &__item {
-			// 	width: 100%;
-			// }
+			@media #{$ipad} {
+				position: absolute;
+				height: 300px;
+				top: 70px;
+				background: $background-header;
+				display: flex;
+				flex-direction: column;
+				width: 48%;
+				right: 0;
+				transform: translateX(100%);
+				transition: transform 0.5s ease-in;
+			}
+			&__item {
+				transition: ease 0.4s;
+				@media #{$ipad} {
+					opacity: 0;
+					width: 100%;
+					height: 25%;
+					@keyframes navLinkFade {
+						from {
+							opacity: 0;
+							transform: translateX(50px);
+						}
+						to {
+							opacity: 1;
+							transform: translateX(0px);
+						}
+					}
+				}
+			}
+			.active {
+				border-top: 1px solid;
+				border-top-color: $green;
+				color: $color-default;
+				@media #{$ipad} {
+					border-top-color: transparent;
+				}
+			}
 			&__links {
 				font-family: "Open Sans", sans-serif;
 				font-size: 13px;
@@ -60,6 +112,15 @@ header {
 					border-top: 1px solid;
 					border-color: $green;
 				}
+				@media #{$ipad} {
+					font-size: 16px;
+					border: 1px solid;
+					border-top: none;
+					height: 100%;
+					&:hover {
+						background: $green;
+					}
+				}
 			}
 		}
 		&__burger {
@@ -69,7 +130,9 @@ header {
 			flex-direction: column;
 			display: none;
 			cursor: pointer;
-
+			@media #{$ipad} {
+				display: inline-flex;
+			}
 			.burger {
 				width: 25px;
 				height: 3px;
@@ -79,128 +142,135 @@ header {
 			}
 		}
 	}
-}
-@media only screen and (max-width: 1024px) {
-	header {
-		.navbar {
-			&__container {
-				max-width: 900px;
-			}
+	.nav--colored {
+		background-color: $green;
+		opacity: 0.9;
+	}
+	#button {
+		display: inline-block;
+		background-color: $green;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		border-radius: 4px;
+		position: fixed;
+		bottom: 30px;
+		right: 30px;
+		transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+		opacity: 0;
+		visibility: hidden;
+		z-index: 1000;
+		&:after {
+			content: "";
+			font-weight: normal;
+			font-style: normal;
+			width: 0;
+			height: 0;
+			border-left: 15px solid transparent;
+			border-right: 15px solid transparent;
+			border-bottom: 15px solid;
+			border-bottom-color: $color-default-darkest;
+		}
+		&:hover {
+			cursor: pointer;
+		}
+		&.show {
+			opacity: 1;
+			visibility: visible;
 		}
 	}
-}
-@media only screen and (max-width: 768px) {
-	header {
-		z-index: 10;
-		position: relative;
-		.navbar {
-			&__logo {
-				justify-content: center;
-			}
-			&__menu {
-				position: absolute;
-				height: 300px;
-				top: 70px;
-				background: $background-header;
-				display: flex;
-				flex-direction: column;
-				align-items: center;
-				width: 48%;
-				right: 0;
-				transform: translateX(100%);
-				transition: transform 0.5s ease-in;
-				&__links {
-					font-size: 16px;
-					border: 1px solid;
-					border-top: none;
-					height: 100%;
-					&:hover {
-						background: $green;
-					}
-				}
-				&__item {
-					opacity: 0;
-					width: 100%;
-					height: 25%;
-					@keyframes navLinkFade {
-						from {
-							opacity: 0;
-							transform: translateX(50px);
-						}
-						to {
-							opacity: 1;
-							transform: translateX(0px);
-						}
-					}
-				}
-			}
-			&__active {
-				transform: translateX(0%);
-			}
-			&__burger {
-				display: inline-flex;
-			}
-		}
+	.toggle .line1 {
+		transform: rotate(-45deg) translate(-9px, 6px);
 	}
-}
-@media only screen and (max-width: 375px) {
-	header {
-		.navbar {
-			height: 40px;
-			&__logo {
-				height: 40px;
-				width: 200px;
-				h1 {
-					width: 70px;
-				}
-				&__text {
-					font-size: 10px;
-					padding-left: 10px;
-				}
-			}
-			&__menu {
-				height: 145px;
-				top: 40px;
-				&__links {
-					font-size: 12px;
-				}
-			}
-			&__burger {
-				height: 40px;
-				.burger {
-					width: 20px;
-					height: 2px;
-					margin: 2px;
-				}
-			}
-		}
-		.toggle .line1 {
-			transform: rotate(-45deg) translate(-3px, 6px);
-		}
-		.toggle .line2 {
-			opacity: 0;
-		}
-		.toggle .line3 {
-			transform: rotate(45deg) translate(-3px, -6px);
-		}
+	.toggle .line2 {
+		opacity: 0;
 	}
-}
-.toggle .line1 {
-	transform: rotate(-45deg) translate(-9px, 6px);
-}
-.toggle .line2 {
-	opacity: 0;
-}
-.toggle .line3 {
-	transform: rotate(45deg) translate(-9px, -6px);
+	.toggle .line3 {
+		transform: rotate(45deg) translate(-9px, -6px);
+	}
 }
 
+// @media only screen and (max-width: 425px) {
+// 	header {
+// 		.navbar {
+// 			height: 40px;
+// 			&__logo {
+// 				height: 40px;
+// 				width: 200px;
+// 				h1 {
+// 					width: 70px;
+// 				}
+// 				&__text {
+// 					font-size: 10px;
+// 					padding-left: 10px;
+// 				}
+// 			}
+// 			&__menu {
+// 				height: 145px;
+// 				top: 40px;
+// 				&__links {
+// 					font-size: 12px;
+// 				}
+// 			}
+// 			&__burger {
+// 				height: 40px;
+// 				.burger {
+// 					width: 20px;
+// 					height: 2px;
+// 					margin: 2px;
+// 				}
+// 			}
+// // 		}
+// 		.toggle .line1 {
+// 			transform: rotate(-45deg) translate(-3px, 6px);
+// 		}
+// 		.toggle .line2 {
+// 			opacity: 0;
+// 		}
+// 		.toggle .line3 {
+// 			transform: rotate(45deg) translate(-3px, -6px);
+// 		}
+// 	}
+// }
 // @media only screen and (max-width: 375px) {
 // 	header {
 // 		.navbar {
-// 			&__container {
-// 				max-width: 300px;
+// 			height: 40px;
+// 			&__logo {
+// 				height: 40px;
+// 				width: 200px;
+// 				h1 {
+// 					width: 70px;
+// 				}
+// 				&__text {
+// 					font-size: 10px;
+// 					padding-left: 10px;
+// 				}
 // 			}
+// 			&__menu {
+// 				height: 145px;
+// 				top: 40px;
+// 				&__links {
+// 					font-size: 12px;
+// 				}
+// 			}
+// 			&__burger {
+// 				height: 40px;
+// 				.burger {
+// 					width: 20px;
+// 					height: 2px;
+// 					margin: 2px;
+// 				}
+// 			}
+// 		}
+// 		.toggle .line1 {
+// 			transform: rotate(-45deg) translate(-3px, 6px);
+// 		}
+// 		.toggle .line2 {
+// 			opacity: 0;
+// 		}
+// 		.toggle .line3 {
+// 			transform: rotate(45deg) translate(-3px, -6px);
 // 		}
 // 	}
 // }

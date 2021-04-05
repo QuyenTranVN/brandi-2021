@@ -1,0 +1,177 @@
+footer {
+	font-family: "Open Sans", sans-serif;
+	.footer {
+		padding-top: 95px;
+		background: $green;
+		@media #{$ipad-pro} {
+			padding-top: 70px;
+		}
+		.container {
+			font-size: 13px;
+			color: $color-default;
+			max-width: 1170px;
+			width: 90%;
+			margin: auto;
+			display: flex;
+			justify-content: space-between;
+			padding-bottom: 120px;
+			@media #{$ipad-pro} {
+				grid-column-gap: 20px;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				justify-content: space-around;
+				font-size: 14px;
+				position: relative;
+				padding-bottom: 50px;
+			}
+			@media #{$ipad} {
+				grid-template-columns: 1fr;
+			}
+			@media #{$phone} {
+				font-size: 11px;
+				position: relative;
+			}
+		}
+		&__brandi {
+			width: 23%;
+			@media #{$ipad-pro} {
+				width: 90%;
+			}
+			@media #{$phone} {
+				width: 100%;
+			}
+			&__text {
+				line-height: 1.8;
+				padding-top: 35px;
+			}
+		}
+		&__subscribe {
+			margin-top: 10px;
+			width: 23%;
+			@media #{$ipad-pro} {
+				width: 60%;
+				margin-top: 60px;
+			}
+			@media #{$ipad} {
+				width: 40%;
+				margin-top: 20px;
+			}
+			@media #{$phone} {
+				width: 60%;
+			}
+			&__title {
+				margin-bottom: 40px;
+				font-weight: bold;
+				line-height: 1.8;
+				@media #{$ipad-pro} {
+					margin-bottom: 10px;
+				}
+			}
+			&__search {
+				position: relative;
+				height: 30px;
+				border: 1px solid;
+				@media #{$ipad-pro} {
+					width: 300px;
+				}
+				span {
+					margin-top: 2px;
+					margin-left: 8px;
+					position: absolute;
+					top: 50%;
+					transform: translateY(-50%);
+					cursor: pointer;
+				}
+			}
+			input {
+				background: none;
+				border: 1px solid;
+				width: 85%;
+				border: none;
+				height: 100%;
+				outline: none;
+				@media #{$ipad-pro} {
+					width: 88%;
+				}
+			}
+			&__disc {
+				padding-top: 20px;
+			}
+		}
+		&__explore {
+			margin-top: 10px;
+			@media #{$ipad-pro} {
+				width: 40%;
+				margin-top: -30px;
+			}
+			@media #{$ipad} {
+				width: 50%;
+				margin-top: 30px;
+			}
+			@media #{$phone} {
+				width: 80%;
+			}
+			&__title {
+				margin-bottom: 40px;
+				font-weight: bold;
+				@media #{$ipad-pro} {
+					margin-bottom: 10px;
+				}
+			}
+			width: 23%;
+			&__lists {
+				justify-content: space-between;
+				display: flex;
+			}
+			&__list__left {
+				line-height: 1.8;
+				margin-right: 10px;
+				list-style: none;
+			}
+			&__list__right {
+				line-height: 1.8;
+				list-style: none;
+				margin-right: 10px;
+			}
+		}
+		&__rights {
+			padding-left: 20px;
+			width: 23%;
+			margin-top: 70px;
+			@media #{$ipad-pro} {
+				width: 100%;
+				margin-top: 30px;
+				padding-left: 10px;
+				display: flex;
+				flex-direction: column;
+			}
+
+			&__text {
+				position: relative;
+				@media #{$ipad-pro} {
+					margin-bottom: 13px;
+				}
+				&:after {
+					position: absolute;
+					content: "";
+					width: 1px;
+					height: 33px;
+					background: $color-default-darkest;
+					left: -10px;
+					top: 3px;
+					opacity: 0.2;
+					@media #{$ipad-pro} {
+						height: 13px;
+					}
+				}
+				span {
+					color: $color-default-darkest;
+				}
+				margin-bottom: 34px;
+			}
+			&__reserved {
+				color: $color-default-darkest;
+			}
+		}
+	}
+}
