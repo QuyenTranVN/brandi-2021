@@ -1,0 +1,22 @@
+<svg id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="41" height="41" viewBox="0 0 41 41">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #898989;
+        stroke-width: 1px;
+        filter: url(#filter);
+      }
+    </style>
+    <filter id="filter" x="0.5" y="0.5" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feFlood result="flood" flood-color="#0eb493"/>
+      <feComposite result="composite" operator="in" in2="SourceGraphic"/>
+      <feBlend result="blend" in2="SourceGraphic"/>
+    </filter>
+  </defs>
+  <image id="megaphone" x="12.5" y="10.5" width="18" height="19" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAATCAYAAACdkl3yAAABMUlEQVQ4jZ2UPU7EMBBG3wYkqNAeITcgNyC0NEBLFU4AlFSrPQGgPcCKkioU9OQGwAk2JXTQUaJB36BR5EQJn2SNbdkv8+fM9p5WjNQJUAC3wGf3SjYSkgM1sAA2Av4LVIb5HHiWnQw6kL0CXgWpp4IsrCp4cwi08tL3R4HqztoSfa75YgzIvr7uJPZYttH487YPVCihVWI/13wpe5ECmRc3wEuqxJLDG+XqF+6gXGFYj1wOhOseuFePsmWmjt3oS/MBQPR6rfmb7H7mMU5UKVira8V26t0k1IQt7/Iqdnym7A/BlmpCHzP1URty1W7tnB29Aw/AF3AHfOvArg7l2o+yZ3IPfOj8dd9vpAoJNZ2GCiXV15B2KYZrUKvuZJBBYji29golZVXrk/8JDTAYFsAPM8k+FBuVJNYAAAAASUVORK5CYII="/>
+  <g style="fill: none; filter: url(#filter)">
+    <circle id="circle" class="cls-1" cx="20.5" cy="20.5" r="20" style="stroke: inherit; filter: none; fill: inherit"/>
+  </g>
+  <use xlink:href="#circle" style="stroke: #898989; filter: none; fill: none"/>
+</svg>
