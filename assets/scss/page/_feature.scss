@@ -1,0 +1,122 @@
+.feature {
+	padding-bottom: 50px;
+	transition: ease 0.4s;
+	width: 100%;
+	position: relative;
+	height: auto;
+	background: $background-feature;
+	&__container {
+		overflow: hidden;
+		max-width: 1170px;
+		width: 90%;
+		margin: auto;
+		@media #{$phone} {
+			width: 80%;
+		}
+	}
+	&__top {
+		margin-top: 100px;
+		text-align: center;
+		margin-bottom: 60px;
+		@media #{$ipad-pro} {
+			margin-top: 60px;
+		}
+		@media #{$ipad} {
+			margin-top: 50px;
+		}
+		@media #{$phone} {
+			margin-top: 40px;
+		}
+		&__title {
+			@media #{$ipad} {
+				margin-bottom: 10px;
+				font-size: 28px;
+			}
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+		.lines {
+			.line {
+				@media #{$ipad} {
+					width: 40px;
+				}
+			}
+		}
+	}
+	&__bottom {
+		@media #{$ipad-pro} {
+			max-width: 900px;
+			margin: auto;
+		}
+		.bottom__box {
+			display: flex;
+			margin: auto;
+		}
+		.bottom__content {
+			margin-bottom: 75px;
+			width: 33.3%;
+			transition: all 0.4s ease;
+			display: flex !important;
+			align-items: flex-start;
+			justify-content: space-between;
+			@media #{$ipad} {
+				justify-content: space-evenly;
+				width: 80%;
+				margin-bottom: 30px;
+			}
+			@media #{$phone} {
+				width: 100%;
+			}
+			&__text {
+				width: 80%;
+				@media #{$phone} {
+					margin-bottom: 30px;
+				}
+			}
+			&__brand {
+				padding-bottom: 15px;
+				font-size: 20px;
+				font-weight: 600;
+				@media #{$phone} {
+					font-size: 16px;
+				}
+			}
+			&__disc {
+				font-size: 13px;
+				color: $color-default-darker;
+				line-height: 1.4;
+				@media #{$ipad} {
+					margin-bottom: 30px;
+				}
+				@media #{$phone} {
+					font-size: 12px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.bottom__content__pic {
+			margin-left: 20px;
+			width: 35px;
+			height: 35px;
+			@media #{$ipad-pro} {
+				margin-left: 0;
+				height: 35px;
+				width: 35px;
+			}
+		}
+		.bottom__content__feather {
+			margin: 4px;
+			@media #{$ipad} {
+				margin-left: 0;
+				width: 30px;
+				height: 30px;
+			}
+			@media #{$phone} {
+				width: 20px;
+				height: 20px;
+				margin-left: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,107 @@
+.meet {
+	transition: ease 0.4s;
+	position: relative;
+	height: auto;
+	&__top {
+		margin-bottom: 105px;
+		margin-top: 100px;
+		text-align: center;
+		@media #{$ipad-pro} {
+			margin-top: 60px;
+			margin-bottom: 50px;
+		}
+		@media #{$ipad} {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		&__title h2 {
+			color: $green;
+			font-size: 28px;
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+
+		.lines {
+			margin-bottom: 35px;
+			.line {
+				@media #{$ipad} {
+					width: 40px;
+				}
+			}
+		}
+	}
+	&__bottom {
+		width: 90%;
+		max-width: 1170px;
+		margin: 0 auto 115px;
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		padding-bottom: 85px;
+		@media #{$ipad-pro} {
+			max-width: 900px;
+		}
+		@media #{$ipad} {
+			margin-bottom: 60px;
+			padding-bottom: 50px;
+		}
+		&__info {
+			margin: 12px;
+		}
+		&__pic {
+			overflow: hidden;
+			position: relative;
+			&:hover .meet__bottom__details {
+				top: 0;
+				transition: ease 0.4s;
+			}
+			&:hover ~ .meet__bottom__pic__text h3 {
+				color: $green;
+			}
+			&__text {
+				p {
+					font-size: 13px;
+					font-weight: lighter;
+				}
+			}
+			&__name {
+				font-size: 22px;
+			}
+		}
+		&__details {
+			background-color: rgba(14, 180, 147, 0.84);
+			position: absolute;
+			height: 100%;
+			top: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			p {
+				color: $color-default;
+
+				line-height: 1.5;
+				padding: 20px 0;
+				strong {
+					margin-bottom: 10px;
+				}
+			}
+		}
+		&__contact {
+			color: $color-default;
+			padding: 20px 0;
+			i {
+				margin: 0 5px;
+				padding: 6px;
+				background: $color-default-darkest;
+				border-radius: 5px;
+				opacity: 0.8;
+				&:hover {
+					background: $color-default;
+					color: $green;
+				}
+			}
+		}
+	}
+}

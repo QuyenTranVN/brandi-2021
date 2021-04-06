@@ -1,0 +1,67 @@
+.fact {
+	background-image: url(../../assets/img/funFact/background.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	&__container {
+		max-width: 1170px;
+		margin: auto;
+		width: 90%;
+	}
+	&__top {
+		padding-top: 90px;
+		text-align: center;
+		padding-bottom: 30px;
+		.line {
+			opacity: 1;
+			@media #{$ipad} {
+				width: 40px;
+			}
+		}
+		&__title {
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+	}
+	&__bottom {
+		padding-bottom: 150px;
+		@media #{$ipad-pro} {
+			padding-bottom: 80px;
+		}
+		@media #{$phone} {
+			padding-bottom: 50px;
+		}
+		&__funs {
+			display: flex;
+			justify-content: space-between;
+			text-align: center;
+			@media #{$ipad} {
+				flex-wrap: wrap;
+				justify-content: space-around;
+			}
+		}
+		&__fun {
+			@media #{$ipad} {
+				margin-bottom: 50px;
+				width: 50%;
+			}
+			&__number {
+				margin-top: 40px;
+				color: $color-default;
+				font-weight: bold;
+				font-size: 60px;
+				@media #{$ipad} {
+					font-size: 45px;
+					margin-top: 20px;
+				}
+				@media #{$phone} {
+					font-size: 30px;
+				}
+			}
+			&__disc {
+				color: $color-default-lighter;
+			}
+		}
+	}
+}

@@ -1,0 +1,154 @@
+.discuss {
+	@media #{$ipad} {
+		position: relative;
+	}
+	&__container {
+		width: 90%;
+		max-width: 1170px;
+		margin: auto;
+	}
+	&__top {
+		margin-bottom: 70px;
+		margin-top: 80px;
+		text-align: center;
+
+		&__title {
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+		.lines {
+			margin-top: 20px;
+			margin-bottom: 30px;
+			justify-content: center;
+			display: flex;
+			.line {
+				width: 70px;
+				height: 1px;
+				background-color: $color-default-lighter;
+				margin: 4px 10px;
+				@media #{$ipad} {
+					width: 40px;
+				}
+			}
+		}
+	}
+	&__bottom {
+		padding-bottom: 170px;
+		display: flex;
+		justify-content: space-between;
+		@media #{$ipad} {
+			padding-bottom: 120px;
+		}
+		&__left {
+			width: 20%;
+			@media #{$ipad} {
+				width: 30%;
+				margin-right: 25px;
+			}
+			&__title {
+				font-size: 18px;
+				color: $color-default-darkest;
+				margin-bottom: 40px;
+				@media #{$phone} {
+					font-size: 16px;
+					margin-bottom: 25px;
+				}
+				@media #{$iPhone} {
+					font-size: 14px;
+				}
+			}
+			&__address {
+				line-height: 1.8;
+				font-weight: lighter;
+				font-size: 14px;
+				@media #{$phone} {
+					line-height: 1.5;
+					font-size: 12px;
+				}
+			}
+		}
+		&__right {
+			width: 70%;
+			@media #{$ipad} {
+				width: 60%;
+			}
+			&__title {
+				padding-bottom: 40px;
+				font-size: 20px;
+				font-weight: bold;
+			}
+			&__column {
+				color: $color-default-lighter;
+				#message {
+					height: 30px;
+					outline: none;
+					width: 100%;
+					border: none;
+					border-bottom: 1px solid  $color-default-lighter;
+					@media #{$phone} {
+						height: 20px;
+					}
+				}
+			}
+			&__nameEmail {
+				margin-bottom: 55px;
+				display: flex;
+				justify-content: space-between;
+				#name,
+				#email {
+					height: 30px;
+					border: none;
+					border-bottom: 1px solid $color-default-lighter;
+					width: 100%;
+					outline: none;
+					@media #{$phone} {
+						height: 20px;
+					}
+				}
+			}
+			&__name {
+				padding-right: 20px;
+				width: 50%;
+			}
+			&__email {
+				width: 50%;
+			}
+			&__envelope {
+				margin-top: 40px;
+				display: flex;
+				justify-content: flex-end;
+				p {
+					padding-left: 15px;
+					cursor: pointer;
+					&:hover {
+						color: $green;
+					}
+				}
+			}
+		}
+		&__social {
+			display: flex;
+			flex-direction: column;
+			@media #{$ipad} {
+				left: 50%;
+				transform: translateX(-50%);
+				position: absolute;
+				bottom: 60px;
+				flex-direction: row;
+			}
+			@media #{$phone} {
+				bottom: 30px;
+			}
+			img {
+				margin: 18px 0;
+				cursor: pointer;
+				width: 80%;
+				@media #{$ipad} {
+					margin: 0 10px;
+					width: 20px;
+				}
+			}
+		}
+	}
+}
