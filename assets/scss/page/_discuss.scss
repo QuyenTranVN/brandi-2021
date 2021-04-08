@@ -8,6 +8,8 @@
 		margin: auto;
 	}
 	&__top {
+		@include line;
+		@include title;
 		margin-bottom: 70px;
 		margin-top: 80px;
 		text-align: center;
@@ -15,21 +17,6 @@
 		&__title {
 			@media #{$phone} {
 				font-size: 22px;
-			}
-		}
-		.lines {
-			margin-top: 20px;
-			margin-bottom: 30px;
-			justify-content: center;
-			display: flex;
-			.line {
-				width: 70px;
-				height: 1px;
-				background-color: $color-default-lighter;
-				margin: 4px 10px;
-				@media #{$ipad} {
-					width: 40px;
-				}
 			}
 		}
 	}
@@ -85,13 +72,13 @@
 					outline: none;
 					width: 100%;
 					border: none;
-					border-bottom: 1px solid  $color-default-lighter;
+					border-bottom: 1px solid $color-default-lighter;
 					@media #{$phone} {
 						height: 20px;
 					}
 				}
 			}
-			&__nameEmail {
+			&__name__email {
 				margin-bottom: 55px;
 				display: flex;
 				justify-content: space-between;

@@ -595,16 +595,24 @@
 
 @mixin line {
 	.lines {
-		margin-top: 18px;
-		display: inline-flex;
-		.line {
-			opacity: 0.3;
-			width: 80px;
-			top: 9px;
-			left: 20px;
-			height: 1px;
-			margin: 6px 12px;
-			background-color: $color-default-lighter;
+		margin-bottom: 25px;
+		position: relative;
+		z-index: 1;
+		&:before {
+			border-top: 1px solid $color-default-lighter;
+			content: "";
+			margin: 0 auto;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			width: 18%;
+			z-index: -1;
+		}
+		span {
+			background: $color-default-lightest;
+			padding: 0 10px;
 		}
 	}
 }
@@ -644,5 +652,6 @@
 	.title {
 		color: $green;
 		font-size: 28px;
+		margin-bottom: 20px;
 	}
 }

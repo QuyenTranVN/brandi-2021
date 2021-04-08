@@ -33,22 +33,16 @@ header {
 			width: 250px;
 			#navbar__logo {
 				color: $color-default;
-				font-family: "Pacifico", cursive;
 				text-decoration: none;
 				font-size: 28px;
 				margin-right: 5px;
 			}
-			// @media #{$ipad-pro} {
-			// 	width: unset;
-			// }
 			&__text {
 				color: $color-default;
 				font-size: 13px;
 				font-weight: 300;
-				font-family: "Open Sans", sans-serif;
 				padding-left: 20px;
-				border-left: 1px solid;
-				border-color: $green;
+				border-left: 1px solid $green;
 			}
 		}
 
@@ -88,16 +82,14 @@ header {
 					}
 				}
 			}
-			.active {
-				border-top: 1px solid;
-				border-top-color: $green;
+			.highline {
+				border-top: 1px solid $green;
 				color: $color-default;
 				@media #{$ipad} {
 					border-top-color: transparent;
 				}
 			}
 			&__links {
-				font-family: "Open Sans", sans-serif;
 				font-size: 13px;
 				color: $color-default-lighter;
 				display: flex;
@@ -145,6 +137,11 @@ header {
 	.nav--colored {
 		background-color: $green;
 		opacity: 0.9;
+		.navbar__logo {
+			.navbar__logo__text {
+				border-left: 1px solid $color-default;
+			}
+		}
 	}
 	#button {
 		display: inline-block;
@@ -189,88 +186,3 @@ header {
 		transform: rotate(45deg) translate(-9px, -6px);
 	}
 }
-
-// @media only screen and (max-width: 425px) {
-// 	header {
-// 		.navbar {
-// 			height: 40px;
-// 			&__logo {
-// 				height: 40px;
-// 				width: 200px;
-// 				h1 {
-// 					width: 70px;
-// 				}
-// 				&__text {
-// 					font-size: 10px;
-// 					padding-left: 10px;
-// 				}
-// 			}
-// 			&__menu {
-// 				height: 145px;
-// 				top: 40px;
-// 				&__links {
-// 					font-size: 12px;
-// 				}
-// 			}
-// 			&__burger {
-// 				height: 40px;
-// 				.burger {
-// 					width: 20px;
-// 					height: 2px;
-// 					margin: 2px;
-// 				}
-// 			}
-// // 		}
-// 		.toggle .line1 {
-// 			transform: rotate(-45deg) translate(-3px, 6px);
-// 		}
-// 		.toggle .line2 {
-// 			opacity: 0;
-// 		}
-// 		.toggle .line3 {
-// 			transform: rotate(45deg) translate(-3px, -6px);
-// 		}
-// 	}
-// }
-// @media only screen and (max-width: 375px) {
-// 	header {
-// 		.navbar {
-// 			height: 40px;
-// 			&__logo {
-// 				height: 40px;
-// 				width: 200px;
-// 				h1 {
-// 					width: 70px;
-// 				}
-// 				&__text {
-// 					font-size: 10px;
-// 					padding-left: 10px;
-// 				}
-// 			}
-// 			&__menu {
-// 				height: 145px;
-// 				top: 40px;
-// 				&__links {
-// 					font-size: 12px;
-// 				}
-// 			}
-// 			&__burger {
-// 				height: 40px;
-// 				.burger {
-// 					width: 20px;
-// 					height: 2px;
-// 					margin: 2px;
-// 				}
-// 			}
-// 		}
-// 		.toggle .line1 {
-// 			transform: rotate(-45deg) translate(-3px, 6px);
-// 		}
-// 		.toggle .line2 {
-// 			opacity: 0;
-// 		}
-// 		.toggle .line3 {
-// 			transform: rotate(45deg) translate(-3px, -6px);
-// 		}
-// 	}
-// }

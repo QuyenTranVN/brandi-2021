@@ -1,13 +1,16 @@
 .meet {
+	@include slick-dot;
 	transition: ease 0.4s;
 	position: relative;
 	height: auto;
 	&__top {
+		@include line;
+		@include title;
 		margin-bottom: 105px;
-		margin-top: 100px;
+		padding-top: 100px;
 		text-align: center;
 		@media #{$ipad-pro} {
-			margin-top: 60px;
+			padding-top: 60px;
 			margin-bottom: 50px;
 		}
 		@media #{$ipad} {
@@ -20,15 +23,6 @@
 			font-size: 28px;
 			@media #{$phone} {
 				font-size: 22px;
-			}
-		}
-
-		.lines {
-			margin-bottom: 35px;
-			.line {
-				@media #{$ipad} {
-					width: 40px;
-				}
 			}
 		}
 	}

@@ -55,7 +55,7 @@
 					</div>
 					<ul class="navbar__menu">
 						<li class="navbar__menu__item">
-							<a href="#home" class="navbar__menu__links active" id="home-page"
+							<a href="#home" class="navbar__menu__links" id="home-page"
 								>Home</a
 							>
 						</li>
@@ -64,7 +64,6 @@
 								>Features</a
 							>
 						</li>
-
 						<li class="navbar__menu__item">
 							<a href="#works" class="navbar__menu__links" id="work-page"
 								>Works</a
@@ -182,11 +181,11 @@
 				<div class="feature__container">
 					<div class="feature__top">
 						<h2 class="feature__top__title title">FEATURES</h2>
-						<div class="lines">
-							<span class="line"></span>
-							<img src="./assets/img/icon/heart-empty.png" alt="" />
-							<span class="line"></span>
-						</div>
+						<h3 class="lines">
+							<span>
+								<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+							</span>
+						</h3>
 					</div>
 					<div class="feature__bottom">
 						<div class="bottom__box">
@@ -363,17 +362,12 @@
 			</section>
 			<section class="work" id="works">
 				<div class="work__overlay work__overlay__hidden"></div>
-
 				<div class="work__top">
 					<h2 class="work__top__title title">WORKS</h2>
 					<div class="lines">
-						<span class="line"></span>
-						<img
-							src="./assets/img/icon/heart-empty.png"
-							alt=""
-							class="work__top__heart"
-						/>
-						<span class="line"></span>
+						<span>
+							<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+						</span>
 					</div>
 					<p class="work__top__text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
@@ -384,15 +378,17 @@
 				<div class="work__bottom">
 					<div class="work__bottom__title">
 						<ul class="work__bottom__list">
-							<li class="work__bottom__item active">All</li>
-							<li class="work__bottom__item">Branding</li>
-							<li class="work__bottom__item">Web</li>
-							<li class="work__bottom__item">Logo Design</li>
-							<li class="work__bottom__item">Photography</li>
+							<li class="work__bottom__item active" data-filter="all">All</li>
+							<li class="work__bottom__item" data-filter="brand">Branding</li>
+							<li class="work__bottom__item" data-filter="web">Web</li>
+							<li class="work__bottom__item" data-filter="logo">Logo Design</li>
+							<li class="work__bottom__item" data-filter="photography">
+								Photography
+							</li>
 						</ul>
 					</div>
-					<div class="work__bottom__pics active all">
-						<div class="work__bottom__pic">
+					<div class="work__bottom__pics active">
+						<div class="work__bottom__pic brand">
 							<img
 								src="./assets/img/Work/KONG.png"
 								class="work__bottom__pic__each"
@@ -416,7 +412,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/KONG.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic web">
 							<img
 								src="./assets/img/Work/Bird.png"
 								class="work__bottom__pic__each"
@@ -440,7 +436,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/Bird.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic brand">
 							<img
 								src="./assets/img/Work/cartoon.png"
 								class="work__bottom__pic__each"
@@ -464,7 +460,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/cartoon.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic web">
 							<img
 								src="./assets/img/Work/dog.png"
 								class="work__bottom__pic__each"
@@ -488,7 +484,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/dog.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic photography">
 							<img
 								src="./assets/img/Work/eyes.png"
 								class="work__bottom__pic__each"
@@ -512,7 +508,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/eyes.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic logo">
 							<img
 								src="./assets/img/Work/fishing.png"
 								class="work__bottom__pic__each"
@@ -536,7 +532,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/fishing.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic photography">
 							<img
 								src="./assets/img/Work/soldior.png"
 								class="work__bottom__pic__each"
@@ -560,7 +556,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/soldior.png" alt="" />
 						</div>
-						<div class="work__bottom__pic">
+						<div class="work__bottom__pic logo">
 							<img
 								src="./assets/img/Work/water.png"
 								class="work__bottom__pic__each"
@@ -585,7 +581,7 @@
 							<img src="./assets/img/Work/water.png" alt="" />
 						</div>
 					</div>
-					<div class="work__bottom__pics branding">
+					<!-- <div class="work__bottom__pics branding">
 						<div class="work__bottom__pic">
 							<img
 								src="./assets/img/Work/fishing.png"
@@ -976,7 +972,7 @@
 							<button class="close-modal">&times;</button>
 							<img src="./assets/img/Work/fishing.png" alt="" />
 						</div>
-					</div>
+					</div> -->
 				</div>
 			</section>
 			<section class="meet" id="team">
@@ -985,9 +981,9 @@
 						<h2>MEET OUR TEAM</h2>
 					</div>
 					<div class="lines">
-						<span class="line"></span>
-						<img src="./assets/img/icon/heart-empty.png" alt="" />
-						<span class="line"></span>
+						<span>
+							<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+						</span>
 					</div>
 					<p class="meet__top__text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
@@ -1296,9 +1292,12 @@
 					<div class="fact__top">
 						<h2 class="fact__top__title title">SOME FUN FACTS</h2>
 						<div class="lines">
-							<span class="line"></span>
-							<img src="./assets/img/icon/white-heart-empty.png" alt="" />
-							<span class="line"></span>
+							<span>
+								<img
+									src="./assets/img/icon/white-heart-empty.png"
+									alt="heart"
+								/>
+							</span>
 						</div>
 					</div>
 					<div class="fact__bottom">
@@ -1333,13 +1332,9 @@
 					<div class="discuss__top">
 						<h2 class="discuss__top__title title">LET'S DISCUSS</h2>
 						<div class="lines">
-							<span class="line"></span>
-							<img
-								src="./assets/img/icon/heart-empty.png"
-								alt=""
-								class="discuss__top__heart"
-							/>
-							<span class="line"></span>
+							<span>
+								<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+							</span>
 						</div>
 						<p class="discuss__top__text">
 							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
@@ -1365,7 +1360,7 @@
 							<p class="discuss__bottom__right__title">Say Hello!</p>
 							<div class="discuss__bottom__right__column">
 								<form action="">
-									<div class="discuss__bottom__right__nameEmail">
+									<div class="discuss__bottom__right__name__email">
 										<div class="discuss__bottom__right__name">
 											<input type="text" id="name" placeholder="Name" />
 										</div>
@@ -1464,8 +1459,12 @@
 
 		<!-- <script src="assets/js/vendor/jquery-2.2.4.min.js"></script> -->
 		<!-- <script src="assets/js/vendor/bootstrap.min.js"></script> -->
+		<!-- <script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script> -->
 		<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
-
 		<script src="./assets/js/slick.min.js"></script>
 		<script src="./assets/js/main.js"></script>
 	</body>

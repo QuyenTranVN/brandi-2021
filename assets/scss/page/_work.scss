@@ -1,26 +1,25 @@
-@include line;
-@include title;
-@include slick-dot;
 .work {
 	transition: ease 0.4s;
 	position: relative;
 	height: auto;
 	&__top {
-		margin-top: 100px;
+		@include line;
+		@include title;
+		padding-top: 100px;
 		padding-bottom: 40px;
 		text-align: center;
 		@media #{$ipad-pro} {
-			margin-top: 60px;
+			padding-top: 60px;
 			width: 90%;
 			margin-left: auto;
 			margin-right: auto;
 			padding-bottom: 30px;
 		}
 		@media #{$ipad} {
-			margin-top: 50px;
+			padidng-top: 50px;
 		}
 		@media #{$phone} {
-			margin-top: 40px;
+			padding-top: 40px;
 		}
 		&__title {
 			@media #{$ipad-pro} {
@@ -33,15 +32,6 @@
 		&__text {
 			@media #{$phone} {
 				font-size: 12px;
-			}
-		}
-		.lines {
-			opacity: 1;
-			margin-bottom: 35px;
-			.line {
-				@media #{$ipad} {
-					width: 40px;
-				}
 			}
 		}
 	}
@@ -100,11 +90,11 @@
 			}
 		}
 
-		&__pics {
-			transition: ease 0.4s;
-			display: none;
-			width: auto;
-		}
+		// &__pics {
+		// 	transition: ease 0.4s;
+		// 	// display: none;
+		// 	width: auto;
+		// }
 
 		&__hover {
 			opacity: 0;

@@ -1,5 +1,3 @@
-// const $ = document.querySelector.bind(document);
-// const $$ = document.querySelectorAll.bind(document);
 const navbarSlide = () => {
 	const burger = document.querySelector(".navbar__burger");
 	const navbar = document.querySelector(".navbar__menu");
@@ -57,41 +55,25 @@ function showSlides(n) {
 	slides[slideIndex - 1].style.display = "block";
 	dots[slideIndex - 1].className += " active";
 }
-// ======================= features======================
-const tabs = document.querySelectorAll(".feature__dot");
-const contents = document.querySelectorAll(".bottom__box");
-
-tabs.forEach((tab, index) => {
-	const content = contents[index];
-
-	tab.onclick = function () {
-		document.querySelector(".feature__dot.active").classList.remove("active");
-		document.querySelector(".bottom__box.active").classList.remove("active");
-
-		this.classList.add("active");
-		content.classList.add("active");
-	};
-});
-
 // ================ Works===============
-// const $ = document.querySelector.bind(document);
-// const $$ = document.querySelectorAll.bind(document);
-
-const buttons = document.querySelectorAll(".work__bottom__item");
-const pics = document.querySelectorAll(".work__bottom__pics");
-for (let i = 0; i < buttons.length; i++) {
-	buttons[i].addEventListener("click", function () {
-		document
-			.querySelector(".work__bottom__item.active")
-			.classList.remove("active");
-		document
-			.querySelector(".work__bottom__pics.active")
-			.classList.remove("active");
-
-		buttons[i].classList.add("active");
-		pics[i].classList.add("active");
+$(document).ready(function () {
+	$(".work__bottom__item").click(function () {
+		const value = $(this).attr("data-filter");
+		if (value == "all") {
+			$(".work__bottom__pic ").show("1000");
+		} else {
+			$(".work__bottom__pic ")
+				.not("." + value)
+				.hide("1000");
+			$(".work__bottom__pic ")
+				.filter("." + value)
+				.show("1000");
+		}
 	});
-}
+	$(".work__bottom__item").click(function () {
+		$(this).addClass("active").siblings().removeClass("active");
+	});
+});
 // Create modal
 const eyes = document.querySelectorAll(".work__bottom__hover__eye");
 const modal = document.querySelectorAll(".work__bottom__modal");
@@ -123,21 +105,6 @@ for (let i = 0; i < closeButton.length; i++) {
 }
 
 // =================== Meet our team================
-// const meetPics = document.querySelectorAll(".meet__bottom__pics");
-// const meetDots = document.querySelectorAll(".meet__dot");
-
-// for (let i = 0; i < meetDots.length; i++) {
-// 	meetDots[i].addEventListener("click", function () {
-// 		document
-// 			.querySelector(".meet__bottom__pics.active")
-// 			.classList.remove("active");
-// 		document.querySelector(".meet__dot.active").classList.remove("active");
-
-// 		meetDots[i].classList.add("active");
-// 		meetPics[i].classList.add("active");
-// 	});
-// }
-
 $(document).ready(function () {
 	$(".bottom__box ").slick({
 		infinite: true,
@@ -198,13 +165,13 @@ $(document).ready(function () {
 		],
 	});
 });
-// ======================//=================
+// ======================// add background menu=================
 window.addEventListener("scroll", function () {
 	var myNav = document.querySelector(".navbar");
 	myNav.classList.toggle("nav--colored", window.scrollY > 710);
 });
 
-// =====================//=======================
+// =====================//back to top=======================
 const btn = document.querySelector("#button");
 window.addEventListener("scroll", function () {
 	if (window.scrollY > 300) {
@@ -219,81 +186,41 @@ btn.addEventListener("click", function () {
 		behavior: "smooth",
 	});
 });
-// ===========================================
-const menu = document.querySelectorAll(".navbar__menu__links");
-for (let i = 0; i < menu.length; i++) {
-	window.addEventListener("scroll", function () {
-		if ((window.scrollY > 0) & (window.scrollY < 710)) {
-			document
-				.querySelector(".navbar__menu__links.active")
-				.classList.remove("active");
 
-			menu[0].classList.add("active");
-		}
-		if ((window.scrollY > 710) & (window.scrollY < 1200)) {
-			document
-				.querySelector(".navbar__menu__links.active")
-				.classList.remove("active");
+// Show active menu when scrolling
+const highlightMenu = () => {
+	const homeMenu = document.querySelector("#home-page");
+	const featureMenu = document.querySelector("#feature-page");
+	const workMenu = document.querySelector("#work-page");
+	const teamMenu = document.querySelector("#team-page");
+	const contactMenu = document.querySelector("#contact-page");
+	const banner = document.querySelector(".banner").scrollHeight;
+	const feature = document.querySelector("#features").scrollHeight + banner;
+	const work = document.querySelector("#works").scrollHeight + feature;
+	const team = document.querySelector("#team").scrollHeight + work;
+	const contact = document.querySelector("#contact").scrollHeight + team;
 
-			menu[1].classList.add("active");
-		}
-		if ((window.scrollY > 1200) & (window.scrollY < 2088)) {
-			document
-				.querySelector(".navbar__menu__links.active")
-				.classList.remove("active");
-
-			menu[2].classList.add("active");
-		}
-		if ((window.scrollY > 2088) & (window.scrollY < 3500)) {
-			document
-				.querySelector(".navbar__menu__links.active")
-				.classList.remove("active");
-
-			menu[3].classList.add("active");
-		}
-		if ((window.scrollY > 3500) & (window.scrollY < 4240)) {
-			document
-				.querySelector(".navbar__menu__links.active")
-				.classList.remove("active");
-
-			menu[4].classList.add("active");
-		}
-	});
-}
-
-// const home = $("#home");
-// const feature = $("#feature");
-// const works = $("#works");
-// const team = $("#team");
-// const contact = $("#contact");
-
-// home.addEventListener("click", function () {
-// 	window.scrollTo({
-// 		top: 0,
-// 		behavior: "smooth",
-// 	});
-// });
-// feature.addEventListener("click", function () {
-// 	window.scrollTo({
-// 		top: 710,
-// 		behavior: "smooth",
-// 	});
-// });
-// home.addEventListener("click", function () {
-// 	window.scrollTo({
-// 		top: ,
-// 		behavior: "smooth",
-// 	});
-// });
-// home.addEventListener("click", function () {
-// 	window.scrollTo({
-// 		top: 0,
-// 		behavior: "smooth",
-// 	});
-// });
-// home.addEventListener("click", function () {
-// 	window.scrollTo({
-// 		top: 0,
-// 		behavior: "smooth",
-// 	});
-// });
+	let scrollPos = window.pageYOffset;
+	// adds 'highlight' class to my menu items
+	if (window.innerWidth > 768 && scrollPos < banner) {
+		homeMenu.classList.add("highline");
+		featureMenu.classList.remove("highline");
+	} else if (window.innerWidth > 768 && scrollPos < feature) {
+		featureMenu.classList.add("highline");
+		homeMenu.classList.remove("highline");
+		workMenu.classList.remove("highline");
+	} else if (window.innerWidth > 768 && scrollPos < work) {
+		workMenu.classList.add("highline");
+		featureMenu.classList.remove("highline");
+		teamMenu.classList.remove("highline");
+	} else if (window.innerWidth > 768 && scrollPos < team) {
+		workMenu.classList.remove("highline");
+		contactMenu.classList.remove("highline");
+		teamMenu.classList.add("highline");
+	} else if (window.innerWidth > 768 && scrollPos < contact) {
+		teamMenu.classList.remove("highline");
+		contactMenu.classList.add("highline");
+	}
+};
+window.addEventListener("scroll", highlightMenu);
+window.addEventListener("click", highlightMenu);
