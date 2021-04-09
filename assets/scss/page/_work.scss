@@ -90,12 +90,6 @@
 			}
 		}
 
-		// &__pics {
-		// 	transition: ease 0.4s;
-		// 	// display: none;
-		// 	width: auto;
-		// }
-
 		&__hover {
 			opacity: 0;
 			text-align: center;
@@ -157,11 +151,11 @@
 		&__modal {
 			transition: 0.4s ease;
 			position: fixed;
-			width: 50%;
+			width: 40%;
 			height: 50%;
 			z-index: 6;
 			left: 50%;
-			top: 30%;
+			top: 20%;
 			transform: translateX(-50%);
 			@media #{$ipad} {
 				width: 80%;
