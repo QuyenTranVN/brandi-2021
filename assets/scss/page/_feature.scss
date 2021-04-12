@@ -1,16 +1,22 @@
 .feature {
 	@include slick-dot;
-	padding-bottom: 50px;
+	padding-bottom: 52px;
+	padding-top: 65px;
 	transition: ease 0.4s;
 	width: 100%;
 	position: relative;
 	height: auto;
 	background: $background-feature;
-	&__container {
-		overflow: hidden;
-		max-width: 1170px;
-		width: 90%;
-		margin: auto;
+	@media #{$ipad-pro} {
+		padding-top: 60px;
+	}
+	@media #{$ipad} {
+		padding-top: 50px;
+	}
+	@media #{$phone} {
+		padding-top: 40px;
+	}
+	.container {
 		@media #{$phone} {
 			width: 80%;
 		}
@@ -18,21 +24,12 @@
 	&__top {
 		@include line;
 		@include title;
-		margin-top: 100px;
 		text-align: center;
-		margin-bottom: 60px;
+		margin-bottom: 54px;
 		.lines span {
 			background: $background-feature;
 		}
-		@media #{$ipad-pro} {
-			margin-top: 60px;
-		}
-		@media #{$ipad} {
-			margin-top: 50px;
-		}
-		@media #{$phone} {
-			margin-top: 40px;
-		}
+
 		&__title {
 			@media #{$ipad} {
 				margin-bottom: 10px;
@@ -53,7 +50,7 @@
 			margin: auto;
 		}
 		.bottom__content {
-			margin-bottom: 75px;
+			margin-bottom: 82px;
 			width: 33.3%;
 			transition: all 0.4s ease;
 			display: flex !important;
@@ -105,7 +102,6 @@
 			}
 		}
 		.bottom__content__feather {
-			margin: 4px;
 			@media #{$ipad} {
 				margin-left: 0;
 				width: 30px;

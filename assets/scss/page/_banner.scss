@@ -17,7 +17,7 @@
 	&__text {
 		max-width: 1170px;
 		position: absolute;
-		bottom: 172px;
+		top: 465px;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
 		left: 50%;
@@ -26,13 +26,7 @@
 		text-align: center;
 		width: 100%;
 		@media #{$ipad-pro} {
-			bottom: 120px;
-		}
-		@media #{$ipad} {
-			bottom: 80px;
-		}
-		@media #{$phone} {
-			bottom: 50px;
+			top: 500px;
 		}
 		&__title {
 			text-align: center;
@@ -63,7 +57,7 @@
 				margin-bottom: 0;
 			}
 			span {
-				color: $green;
+				color: $green-banner;
 			}
 		}
 		&__line {
@@ -71,7 +65,7 @@
 			.line {
 				width: 40px;
 				height: 1px;
-				background-color: $green;
+				background-color: $green-banner;
 				margin: 10px 10px;
 				@media #{$phone} {
 					width: 20px;
@@ -97,7 +91,7 @@
 	&__contact {
 		position: absolute;
 		font-size: 20px;
-		bottom: 50px;
+		bottom: 65px;
 		left: 50%;
 		transform: translateX(-50%);
 		color: $color-default-lighter;
