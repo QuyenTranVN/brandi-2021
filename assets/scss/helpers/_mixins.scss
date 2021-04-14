@@ -593,30 +593,6 @@
 	display: flex;
 }
 
-@mixin line {
-	.lines {
-		margin-bottom: 25px;
-		position: relative;
-		z-index: 1;
-		&:before {
-			border-top: 1px solid $color-default-lighter;
-			content: "";
-			margin: 0 auto;
-			position: absolute;
-			top: 50%;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			width: 24%;
-			z-index: -1;
-		}
-		span {
-			background: $color-default-lightest;
-			padding: 0 10px;
-		}
-	}
-}
-
 @mixin slick-dot {
 	.slick-dots {
 		display: flex;
@@ -648,10 +624,38 @@
 		}
 	}
 }
-@mixin title {
+@mixin line {
 	.title {
+		display: flex;
+		flex-direction: column;
 		color: $green;
 		font-size: 28px;
-		margin-bottom: 10px;
+		position: relative;
+		span {
+			width: 60px;
+			position: absolute;
+			left: 50%;
+			transform: translateX(-50%);
+			bottom: -40px;
+			z-index: 1;
+			&::after {
+				content: "";
+				position: absolute;
+				width: 90px;
+				background: $color-default-darker;
+				height: 1px;
+				left: 60px;
+				top: 53%;
+			}
+			&::before {
+				content: "";
+				position: absolute;
+				width: 90px;
+				background: $color-default-darker;
+				height: 1px;
+				right: 60px;
+				top: 53%;
+			}
+		}
 	}
 }

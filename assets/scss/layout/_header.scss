@@ -1,28 +1,37 @@
 header {
+	height: 70px;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	z-index: 10;
+	transition: 0.4s ease;
+	background-color: $background-header;
 	@media #{$ipad-pro} {
 		z-index: 10;
-		position: relative;
-	}
-	.navbar {
-		height: 70px;
-		align-items: center;
 		position: fixed;
-		width: 100%;
-		background-color: $background-header;
-		z-index: 10;
-		transition: 0.4s ease;
-		.container {
-			justify-content: space-between;
-			display: flex;
-			.navbar__active {
-				@media #{$ipad} {
-					transform: translateX(0%);
-				}
-			}
-			@media #{$ipad-pro} {
-				max-width: 900px;
+	}
+	.container {
+		justify-content: space-between;
+		display: flex;
+		.navbar__active {
+			@media #{$ipad} {
+				transform: translateX(0%);
 			}
 		}
+		@media #{$ipad-pro} {
+			max-width: 900px;
+		}
+	}
+	.nav--colored {
+		background-color: $green;
+		opacity: 0.9;
+		.navbar__logo {
+			.navbar__logo__text {
+				border-left: 1px solid $color-default;
+			}
+		}
+	}
+	.navbar {
 		&__logo {
 			display: flex;
 			align-items: center;
@@ -133,48 +142,7 @@ header {
 			}
 		}
 	}
-	.nav--colored {
-		background-color: $green;
-		opacity: 0.9;
-		.navbar__logo {
-			.navbar__logo__text {
-				border-left: 1px solid $color-default;
-			}
-		}
-	}
-	#button {
-		display: inline-block;
-		background-color: $green;
-		width: 50px;
-		height: 50px;
-		text-align: center;
-		border-radius: 4px;
-		position: fixed;
-		bottom: 30px;
-		right: 30px;
-		transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-		opacity: 0;
-		visibility: hidden;
-		z-index: 1000;
-		&:after {
-			content: "";
-			font-weight: normal;
-			font-style: normal;
-			width: 0;
-			height: 0;
-			border-left: 15px solid transparent;
-			border-right: 15px solid transparent;
-			border-bottom: 15px solid;
-			border-bottom-color: $color-default-darkest;
-		}
-		&:hover {
-			cursor: pointer;
-		}
-		&.show {
-			opacity: 1;
-			visibility: visible;
-		}
-	}
+
 	.toggle .line1 {
 		transform: rotate(-45deg) translate(-9px, 6px);
 	}
@@ -183,5 +151,38 @@ header {
 	}
 	.toggle .line3 {
 		transform: rotate(45deg) translate(-9px, -6px);
+	}
+}
+#scrollTop {
+	display: inline-block;
+	background-color: $green;
+	width: 50px;
+	height: 50px;
+	text-align: center;
+	border-radius: 4px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+	opacity: 0;
+	visibility: hidden;
+	z-index: 1000;
+	&:after {
+		content: "";
+		font-weight: normal;
+		font-style: normal;
+		width: 0;
+		height: 0;
+		border-left: 15px solid transparent;
+		border-right: 15px solid transparent;
+		border-bottom: 15px solid;
+		border-bottom-color: $color-default-darkest;
+	}
+	&:hover {
+		cursor: pointer;
+	}
+	&.show {
+		opacity: 1;
+		visibility: visible;
 	}
 }
