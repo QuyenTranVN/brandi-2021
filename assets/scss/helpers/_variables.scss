@@ -19,13 +19,17 @@ $color-warning: #ffc700;
 
 // Danger
 $color-danger: #f54747;
-// Background
-$background: #0e2c2a;
+// Background-header
+$background-header: rgba(14, 44, 42, 0.8);
+// background-feature
+$background-feature: #f4f7f9;
 //colors
 $whiteish: #f2f2f2;
 $pink: #e96f92;
 $purple: #75517d;
 $green: #0eb493;
+$green-banner: #0eb494;
+
 //options
 $duration: 0.8s;
 $ease-in-out: cubic-bezier(0.445, 0.05, 0.55, 0.95);
@@ -48,5 +52,8 @@ $info-tablet-horizontal: "only screen and (max-width : 1160px)";
 $info-tablet-vertical: "only screen and (max-width : 900px)";
 $info-phone: "only screen and (max-width : 767px)";
 $info-phone-4: "only screen and (max-width : 320px)";
-
+$ipad-pro: "only screen and (max-width : 1024px)";
+$ipad: "only screen and (max-width : 768px)";
+$phone: "only screen and (max-width : 425px)";
+$iPhone: "only screen and (max-width : 375px)";
 $primary-green: #0eb493;

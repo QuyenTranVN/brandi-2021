@@ -1,0 +1,209 @@
+.work {
+	padding-top: 85px;
+	transition: ease 0.4s;
+	position: relative;
+	height: auto;
+	&__top {
+		@include line;
+		margin-bottom: 44px;
+		text-align: center;
+		@media #{$ipad-pro} {
+			padding-top: 60px;
+			width: 90%;
+			margin-left: auto;
+			margin-right: auto;
+			padding-bottom: 30px;
+		}
+		@media #{$ipad} {
+			padidng-top: 50px;
+		}
+		@media #{$phone} {
+			padding-top: 40px;
+		}
+		&__title {
+			margin-bottom: 60px;
+
+			@media #{$ipad-pro} {
+				font-size: 28px;
+			}
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+		&__text {
+			font-size: 18px;
+			font-weight: bold;
+			opacity: 0.7;
+			@media #{$phone} {
+				font-size: 12px;
+			}
+		}
+	}
+	.work__bottom {
+		transition: all 0.8s ease;
+		text-align: center;
+
+		&__list {
+			margin-bottom: 35px;
+			justify-content: space-between;
+			display: inline-flex;
+			list-style: none;
+			transition: all 0.4s ease;
+			cursor: pointer;
+			.active {
+				color: white;
+				background: $green;
+				transition: all 0.4s ease;
+			}
+			@media #{$ipad} {
+				width: 80%;
+				align-items: center;
+			}
+			@media #{$phone} {
+				font-size: 10px;
+				align-items: center;
+				display: -webkit-box;
+				margin: 0 2px;
+				padding: 5px 8px;
+			}
+			@media #{$iPhone} {
+				padding: 5px 0;
+				margin: auto;
+			}
+		}
+		&__item {
+			font-weight: 600;
+			border: 1px solid transparent;
+			padding: 3px 20px;
+			margin: 0 5px;
+			border-radius: 5px;
+			&:hover {
+				color: $color-default;
+				background: $green;
+			}
+			@media #{$ipad} {
+				padding: 2px 17px;
+			}
+			@media #{$phone} {
+				padding: 2px 15px;
+			}
+			@media #{$iPhone} {
+				padding: 3px 3px;
+			}
+		}
+
+		&__hover {
+			opacity: 0;
+			text-align: center;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			transition: 0.2s ease-in-out;
+			&__green {
+				color: $color-default;
+				text-align: center;
+				position: absolute;
+				top: 55%;
+				transform: translateY(-50%);
+				width: 100%;
+			}
+			img {
+				cursor: pointer;
+				text-align: center;
+				justify-content: center;
+				display: flex;
+				margin: 0 auto 18px;
+				@media #{$iPhone} {
+					margin-bottom: 0;
+				}
+			}
+			p {
+				strong {
+					font-size: 17px;
+					font-weight: bold;
+					@media #{$iPhone} {
+						font-size: 14px;
+					}
+				}
+				span {
+					font-size: 14px;
+					opacity: 0.8;
+				}
+			}
+		}
+		&__pics {
+			transition: all 0.4s ease;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			@media #{$ipad} {
+				flex-direction: row;
+			}
+		}
+		&__pic {
+			position: relative;
+			width: 25%;
+			&:hover > .work__bottom__hover {
+				opacity: 0.9;
+				background: $green;
+			}
+
+			@media #{$ipad} {
+				width: 50%;
+			}
+			&__each {
+				width: 100%;
+				height: 100%;
+			}
+		}
+		&__modal {
+			transition: 0.4s ease;
+			position: fixed;
+			width: 40%;
+			height: 50%;
+			z-index: 6;
+			left: 50%;
+			top: 20%;
+			transform: translateX(-50%);
+			@media #{$ipad} {
+				width: 80%;
+				top: 25%;
+			}
+
+			.close-modal {
+				position: absolute;
+				right: 2rem;
+				font-size: 25px;
+				top: 20px;
+				color: #f2f2f2;
+				cursor: pointer;
+				padding: 0 12px;
+				border: 1px solid transparent;
+				border-radius: 5px;
+				background: #0eb493;
+			}
+			img {
+				width: 100%;
+			}
+			&__hidden {
+				display: none;
+			}
+		}
+	}
+	&__overlay {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		backdrop-filter: blur(3px);
+		z-index: 5;
+		&__hidden {
+			display: none;
+		}
+	}
+}

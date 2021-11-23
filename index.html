@@ -22,9 +22,9 @@
 			href="https://fonts.googleapis.com/css?family=Varela+Round"
 			rel="stylesheet"
 		/>
-
 		<!-- <link rel="stylesheet" href="assets/css/vendor/bootstrap.css" /> -->
 		<link rel="stylesheet" href="./assets/css/main.css" />
+		<link rel="stylesheet" href="./assets/css/slick.css" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link
 			href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
@@ -36,74 +36,929 @@
 			rel="stylesheet"
 		/>
 	</head>
+
 	<body>
-		<header>
-			<div class="navbar">
-				<div class="navbar__container">
-					<div class="navbar__logo">
-						<h1>
-							<a href="#home" id="navbar__logo">
-								<img src="./assets/img/brand/Brandi.svg" alt="" />
-							</a>
-						</h1>
-
-						<p class="navbar__logo__text">I'am your tag line</p>
-					</div>
-					<ul class="navbar__menu">
-						<li class="navbar__menu__item">
-							<a href="#home" class="navbar__menu__links" id="home-page"
-								>Home</a
-							>
-						</li>
-						<li class="navbar__menu__item">
-							<a href="#features" class="navbar__menu__links" id="home-page"
-								>Features</a
-							>
-						</li>
-
-						<li class="navbar__menu__item">
-							<a href="#works" class="navbar__menu__links" id="home-page"
-								>Works</a
-							>
-						</li>
-						<li class="navbar__menu__item">
-							<a href="#team" class="navbar__menu__links" id="home-page"
-								>Team</a
-							>
-						</li>
-
-						<li class="navbar__menu__item">
-							<a href="#contact" class="navbar__menu__links" id="home-page"
-								>Contact</a
-							>
-						</li>
-					</ul>
-					<div class="navbar__burger">
-						<div class="line1 burger"></div>
-						<div class="line2 burger"></div>
-						<div class="line3 burger"></div>
-					</div>
+	<!-- Header section -->
+		<header id="home" class="navbar">
+			<div class="container">
+				<div class="navbar__logo">
+					<h1>
+						<a href="#home">
+							<img
+								src="./assets/img/brand/Brandi.svg"
+								id="navbar__logo"
+								alt=""
+							/>
+						</a>
+					</h1>
+					<p class="navbar__logo__text">I'am your tag line</p>
+				</div>
+				<ul class="navbar__menu">
+					<li class="navbar__menu__item">
+						<a href="#home" class="navbar__menu__links" id="home-page">Home</a>
+					</li>
+					<li class="navbar__menu__item">
+						<a href="#features" class="navbar__menu__links" id="feature-page">
+							Features
+						</a>
+					</li>
+					<li class="navbar__menu__item">
+						<a href="#works" class="navbar__menu__links" id="work-page">
+							Works
+						</a>
+					</li>
+					<li class="navbar__menu__item">
+						<a href="#team" class="navbar__menu__links" id="team-page">Team</a>
+					</li>
+					<li class="navbar__menu__item">
+						<a href="#contact" class="navbar__menu__links" id="contact-page">
+							Contact
+						</a>
+					</li>
+				</ul>
+				<div class="navbar__burger">
+					<div class="line1 burger"></div>
+					<div class="line2 burger"></div>
+					<div class="line3 burger"></div>
 				</div>
 			</div>
 		</header>
-		<!-- <main>
-			<section class="slideshow">
-				<div class= slideshow__container">
-					<img src="./assets/img/slideshow/Layer 2.png" alt="" />
-					<div class="slideShow__text">
-						<h1 class="slideShow__title">
-							Helping Business And Companies Innovate Transform And Lead
-						</h1>
-						<p class="slideShow__paragraph">
-							Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque
-							inventore veritatis id vel fuga dicta laudantium molestias quos,
-							possimus placeat quam rerum obcaecati repellendus officia culpa
-							magnam accusamus aperiam fugiat.
+	<!--  Closed Header section -->
+
+		<main>
+			<a id="scrollTop"></a>
+			<!-- Banner section -->
+			<section class="banner">
+				<div class="banner__wrapper">
+					<div class="banner__contain fade">
+						<div
+							class="banner__pics"
+							style="
+								background-image: url(./assets/img/slideshow/slideshow1.png);
+							"
+						></div>
+						<div
+							class="banner__pics"
+							style="
+								background-image: url(./assets/img/slideshow/slideshow2.png);
+							"
+						></div>
+						<div
+							class="banner__pics"
+							style="
+								background-image: url(./assets/img/slideshow/slideshow3.png);
+							"
+						></div>
+					</div>
+					<div class="banner__text">
+						<h2 class="banner__text__title">Meet <strong>brandi</strong></h2>
+						<p class="banner__text__content">
+							<span>/creative </span> one page template.
 						</p>
+						<p class="banner__text__small">we are a team of professionals</p>
+					</div>
+					<div class="banner__contact">
+						<i class="fab fa-twitter tw"></i>
+						<i class="fab fa-facebook-f fb"></i>
+						<i class="fab fa-google-plus-g gg"></i>
+						<i class="fab fa-dribbble dr"></i>
 					</div>
 				</div>
 			</section>
-		</main> -->
+			
+			<!-- Feature section -->
+			<section class="feature" id="features">
+				<div class="container">
+					<div class="feature__top">
+						<h2 class="feature__top__title title">
+							FEATURES
+							<span>
+								<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+							</span>
+						</h2>
+					</div>
+					<div class="feature__bottom">
+						<div class="bottom__box">
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/feature.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Branding</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/pencil.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<!-- </div> -->
+								<div class="bottom__content__text">
+									<h3>Development</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/megaphone.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Consulting</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/megaphone.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Consulting</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/pencil.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Development</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/feature.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Branding</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/pencil.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Development</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/megaphone.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Consulting</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+							<div class="bottom__content">
+								<img
+									src="./assets/img/icon/megaphone.png"
+									class="bottom__content__feather"
+									alt=""
+								/>
+								<div class="bottom__content__text">
+									<h3>Consulting</h3>
+									<p>
+										Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut
+										cupiditate, tenetur illum, quis excepturi, numquam
+										temporibus inventore facilis praesentium quo qui! Ab vitae
+										itaque sunt quidem iste omnis illo placeat.
+									</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Work Section -->
+			<section class="work" id="works">
+				<div class="work__overlay work__overlay__hidden"></div>
+				<div class="work__top">
+					<h2 class="work__top__title title">
+						WORKS
+						<span>
+							<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+						</span>
+					</h2>
+					<p class="work__top__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+						mollitia praesentium animi eveniet consequuntur <br />explicabo
+						quisquam excepturi dolorum quibusdam nostrum.
+					</p>
+				</div>
+				<div class="work__bottom">
+					<ul class="work__bottom__list">
+						<li class="work__bottom__item active" data-filter="all">All</li>
+						<li class="work__bottom__item" data-filter="brand">Branding</li>
+						<li class="work__bottom__item" data-filter="web">Web</li>
+						<li class="work__bottom__item" data-filter="logo">Logo Design</li>
+						<li class="work__bottom__item" data-filter="photography">
+							Photography
+						</li>
+					</ul>
+					<div class="work__bottom__pics">
+						<div class="work__bottom__pic">
+							<img
+								src="./assets/img/Work/KONG.png"
+								alt="Kong"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong>
+										<br />Photography
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/KONG.png" alt="Kong" />
+						</div>
+						<div class="work__bottom__pic web">
+							<img
+								src="./assets/img/Work/Bird.png"
+								alt=" bird"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/Bird.png" alt="Bird" />
+						</div>
+						<div class="work__bottom__pic brand">
+							<img
+								src="./assets/img/Work/cartoon.png"
+								alt="Cartoon"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/cartoon.png" alt="cartoon" />
+						</div>
+						<div class="work__bottom__pic web">
+							<img
+								src="./assets/img/Work/dog.png"
+								alt="dog"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/dog.png" alt="dog" />
+						</div>
+						<div class="work__bottom__pic photography">
+							<img
+								src="./assets/img/Work/eyes.png"
+								alt="eye"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/eyes.png" alt="eye" />
+						</div>
+						<div class="work__bottom__pic logo">
+							<img
+								src="./assets/img/Work/fishing.png"
+								alt="fishing"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/fishing.png" alt="fisihing" />
+						</div>
+						<div class="work__bottom__pic photography">
+							<img
+								src="./assets/img/Work/soldior.png"
+								alt="soldior"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/soldior.png" alt="soldior" />
+						</div>
+						<div class="work__bottom__pic logo">
+							<img
+								src="./assets/img/Work/water.png"
+								alt="water"
+							/>
+							<div class="work__bottom__hover">
+								<div class="work__bottom__hover__green">
+									<img
+										src="./assets/img/icon/eye.png"
+										alt="eye"
+										class="work__bottom__hover__eye"/>
+										<strong> Labore et dolore magnam </strong> <br />
+										<span>Photography</span>
+									</p>
+								</div>
+							</div>
+						</div>
+						<div class="work__bottom__modal work__bottom__modal__hidden">
+							<button class="close-modal">&times;</button>
+							<img src="./assets/img/Work/water.png" alt="water" />
+						</div>
+					</div>
+				</div>
+			</section>
+			 <!-- Metting section -->
+			<section class="meet" id="team">
+				<div class="meet__top">
+					<div class="meet__top__title title">
+						<h2>
+							MEET OUR TEAM
+							<span>
+								<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+							</span>
+						</h2>
+					</div>
+					<p class="meet__top__text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+						totam obcaecati voluptatum quod aperiam <br />
+						reiciendis,voluptatum quod aperiam reiciendis?
+					</p>
+				</div>
+				<div class="meet__bottom">
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/white_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet
+									</strong>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/girl.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/black_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/glasses_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/black_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/glasses_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/white_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/girl.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/girl.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/black_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/glasses_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+					<div class="meet__bottom__info">
+						<div class="meet__bottom__pic">
+							<img src="./assets/img/meet/black_man.png" alt="" />
+							<div class="meet__bottom__details">
+								<p>
+									<strong
+										>Lorem ipsum dolor <br />
+										sit ametipsum dolor sit amet</strong
+									>
+									consectetur adipisicing elit. Rem, assumenda adipisicing elit.
+									Rem assumenda?
+								</p>
+								<div class="meet__bottom__contact">
+									<i class="fab fa-twitter"></i>
+									<i class="fab fa-facebook"></i>
+									<i class="fab fa-google-plus"></i>
+								</div>
+							</div>
+						</div>
+						<div class="meet__bottom__pic__text">
+							<h3>John Filmr Doe</h3>
+							<p>Managing Director</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Fact Section -->
+			<section class="fact">
+				<div class="container">
+					<div class="fact__top">
+						<h2 class="fact__top__title title">
+							SOME FUN FACTS
+							<span>
+								<img
+									src="./assets/img/icon/white-heart-empty.png"
+									alt="heart"
+								/>
+							</span>
+						</h2>
+					</div>
+					<div class="fact__bottom">
+						<div class="fact__bottom__fun">
+								<img src="./assets/img/icon/hours.svg" alt="" />
+								<p>3200</p>
+								<span>HOURS OF WORK</span>
+							</div>
+							<div class="fact__bottom__fun">
+								<img src="./assets/img/icon/clients.svg" alt="" />
+								<p>120</p>
+								<span>SATISFIED CLIENTS</span>
+							</div>
+							<div class="fact__bottom__fun">
+								<img src="./assets/img/icon/Projects.svg" alt="" />
+
+								<p>360</p>
+								<span>PROJECTS DELIVERED</span>
+							</div>
+							<div class="fact__bottom__fun">
+								<img src="./assets/img/icon/Awareds.svg" alt="" />
+								<p>42</p>
+								<span>AWARDS WON</span>
+							</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Discuss Section -->
+			<section class="discuss">
+				<div class="container">
+					<div class="discuss__top">
+						<h2 class="discuss__top__title title">
+							LET'S DISCUSS
+							<span>
+								<img src="./assets/img/icon/heart-empty.png" alt="heart" />
+							</span>
+						</h2>
+
+						<p class="discuss__top__text">
+							Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+							Inventore, odio Lorem ipsum dolor, sit amet!
+						</p>
+					</div>
+					<div class="discuss__bottom">
+						<div class="discuss__bottom__left">
+							<p class="discuss__bottom__left__title">
+								Cras at ultrices erat, sed vulputate!
+							</p>
+							<div class="discuss__bottom__left__address">
+								<p class="addres">
+									2345 Setwant natret, 1234, Washington, United States.
+								</p>
+
+								<p class="number">(401) 1234 567</p>
+								<p class="email">hello@brandi.com</p>
+								<p class="web">www.brandi.com</p>
+							</div>
+						</div>
+						<div class="discuss__bottom__right">
+							<p class="discuss__bottom__right__title">Say Hello!</p>
+							<form action="">
+								<input type="text" id="name" placeholder="Name" />
+
+								<input type="email" id="email" placeholder="Email" />
+
+								<textarea
+									name="message"
+									id="message"
+									placeholder="Message"
+								></textarea>
+							</form>
+							<div class="discuss__bottom__right__envelope">
+								<img src="./assets/img/icon/Envelope.svg" alt="" />
+								<p>Send message</p>
+							</div>
+						</div>
+						<div class="discuss__bottom__social">
+							<img src="./assets/img/icon/behance.svg" alt="" />
+							<img src="./assets/img/icon/twitter.svg" alt="" />
+							<img src="./assets/img/icon/dribbble.svg" alt="" />
+							<img src="./assets/img/icon/forrst.svg" alt="" />
+							<img src="./assets/img/icon/googlePlus.svg" alt="" />
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Map Section -->
+			<section class="map">
+				<div class="map__address">
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.471080459696!2d106.68594031449454!3d10.775186262163711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f3b3357f417%3A0x23e417f7b7cd1b1f!2sC%C3%B4ng%20ty%20gumi%20Vietnam!5e0!3m2!1svi!2s!4v1617000276191!5m2!1svi!2s"
+						style="border: 0"
+						allowfullscreen=""
+						loading="lazy"
+					></iframe>
+				</div>
+			</section>
+		</main>
+
+		<!-- Footer Section -->
+		<footer id="contact" class="footer">
+				<div class="container">
+					<div class="footer__brandi">
+						<img src="./assets/img/brand/Brandi.svg" alt="" />
+						<p class="footer__brandi__text">
+							Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore
+							explicabo recusandae quasi minus, hic delectus dignissimos fugit
+							vitae in eos!fugit vitae in eos!
+						</p>
+					</div>
+					<div class="footer__subscribe">
+						<p class="footer__subscribe__title">Subscribe</p>
+						<div class="footer__subscribe__search">
+							<input type="text" />
+							<span><img src="./assets/img/icon/arrow.svg" alt="" /></span>
+						</div>
+						<p class="footer__subscribe__disc">
+							Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+						</p>
+					</div>
+					<div class="footer__explore">
+						<p class="footer__explore__title">Explore</p>
+						<div class="footer__explore__lists">
+							<ul class="footer__explore__list__left">
+								<li>Envato</li>
+								<li>Themecurve</li>
+								<li>Kreativeshowcase</li>
+								<li>Freebiescurve</li>
+							</ul>
+							<ul class="footer__explore__list__right">
+								<li>Themeforest</li>
+								<li>Microsoft</li>
+								<li>Google</li>
+								<li>Yahoo</li>
+							</ul>
+						</div>
+					</div>
+					<div class="footer__rights">
+						<p class="footer__rights__text">
+							Created with
+							<img src="./assets/img/icon/black-heart-empty.png" alt="" /> by
+							<span>themecurve</span>, exclusive for Kreativeshowcase
+						</p>
+						<p class="footer__rights__reserved">
+							© 2014 Brandi. All Rights Reserved
+						</p>
+					</div>
+				</div>
+		</footer>
 		<!--[if lt IE 8]>
 			<p class="browserupgrade">
 				You are using an <strong>outdated</strong> browser. Please
@@ -114,6 +969,13 @@
 
 		<!-- <script src="assets/js/vendor/jquery-2.2.4.min.js"></script> -->
 		<!-- <script src="assets/js/vendor/bootstrap.min.js"></script> -->
+		<!-- <script
+			src="https://code.jquery.com/jquery-3.6.0.js"
+			integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+			crossorigin="anonymous"
+		></script> -->
+		<script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
+		<script src="./assets/js/slick.min.js"></script>
 		<script src="./assets/js/main.js"></script>
 	</body>
 </html>
