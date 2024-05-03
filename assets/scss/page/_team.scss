@@ -1,0 +1,112 @@
+.meet {
+	padding-bottom: 117px;
+	padding-top: 85px;
+	@include slick-dot;
+	transition: ease 0.4s;
+	position: relative;
+	height: auto;
+	@media #{$ipad-pro} {
+		padding-top: 60px;
+	}
+	&__top {
+		margin-bottom: 92px;
+		text-align: center;
+		@media #{$ipad-pro} {
+			margin-bottom: 50px;
+		}
+		@media #{$ipad} {
+			width: 80%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		@include line;
+		.title {
+			margin-bottom: 58px;
+		}
+		&__title h2 {
+			font-size: 28px;
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+		&__text {
+			margin: auto;
+			max-width: 1170px;
+			text-align: center;
+			width: 90%;
+			font-size: 18px;
+			font-weight: bold;
+			opacity: 0.7;
+		}
+	}
+	&__bottom {
+		width: 90%;
+		max-width: 1170px;
+		padding-bottom: 80px;
+		margin: auto;
+		display: flex;
+		text-align: center;
+		justify-content: space-between;
+		@media #{$ipad-pro} {
+			max-width: 900px;
+		}
+		@media #{$ipad} {
+			margin-bottom: 60px;
+			padding-bottom: 50px;
+		}
+		&__info {
+			margin: 12px;
+		}
+		&__pic {
+			overflow: hidden;
+			position: relative;
+			margin-bottom: 12px;
+			&:hover .meet__bottom__details {
+				top: 0;
+				transition: ease 0.4s;
+			}
+			&:hover ~ .meet__bottom__pic__text h3 {
+				color: $green;
+			}
+			&__text {
+				h3 {
+					font-size: 22px;
+				}
+				p {
+					font-size: 13px;
+					font-weight: lighter;
+				}
+			}
+		}
+		&__details {
+			background-color: rgba(14, 180, 147, 0.84);
+			position: absolute;
+			height: 100%;
+			top: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			p {
+				color: $color-default;
+				line-height: 1.7;
+				padding: 20px 0;
+			}
+		}
+		&__contact {
+			padding: 20px 0;
+			i {
+				margin: 0 1px;
+				color: $color-default-lightest;
+				padding: 13px;
+				font-size: 27px;
+				background: rgba(0, 0, 0, 0.35);
+				opacity: 0.9;
+				&:hover {
+					background: $color-default;
+					color: $green;
+					opacity: 0.9;
+				}
+			}
+		}
+	}
+}

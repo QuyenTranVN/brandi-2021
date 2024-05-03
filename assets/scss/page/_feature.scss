@@ -1,0 +1,110 @@
+.feature {
+	@include slick-dot;
+	padding-bottom: 52px;
+	padding-top: 65px;
+	transition: ease 0.4s;
+	width: 100%;
+	position: relative;
+	height: auto;
+	background: $background-feature;
+	@media #{$ipad-pro} {
+		padding-top: 60px;
+	}
+	@media #{$ipad} {
+		padding-top: 50px;
+	}
+	@media #{$phone} {
+		padding-top: 40px;
+	}
+	.container {
+		@media #{$phone} {
+			width: 80%;
+		}
+	}
+	&__top {
+		text-align: center;
+		margin-bottom: 95px;
+		@include line;
+
+		&__title {
+			@media #{$ipad} {
+				margin-bottom: 10px;
+			}
+			@media #{$phone} {
+				font-size: 22px;
+			}
+		}
+	}
+	&__bottom {
+		@media #{$ipad-pro} {
+			max-width: 900px;
+			margin: auto;
+		}
+		.bottom__box {
+			display: flex;
+			margin: auto;
+		}
+		.bottom__content {
+			margin-bottom: 82px;
+			width: 33.3%;
+			transition: all 0.4s ease;
+			display: flex !important;
+			align-items: flex-start;
+			justify-content: space-between;
+			@media #{$ipad} {
+				justify-content: space-evenly;
+				width: 80%;
+				margin-bottom: 30px;
+			}
+			@media #{$phone} {
+				width: 100%;
+			}
+			&__text {
+				width: 80%;
+				@media #{$phone} {
+					margin-bottom: 30px;
+				}
+			}
+			h3 {
+				padding-bottom: 15px;
+				font-size: 20px;
+				font-weight: 600;
+				@media #{$phone} {
+					font-size: 16px;
+				}
+			}
+			p {
+				font-size: 13px;
+				color: $color-default-darker;
+				line-height: 1.4;
+				@media #{$ipad} {
+					margin-bottom: 30px;
+				}
+				@media #{$phone} {
+					font-size: 12px;
+					margin-bottom: 15px;
+				}
+			}
+		}
+		.bottom__content__feather {
+			margin-left: 20px;
+			width: 35px;
+			height: 35px;
+			@media #{$ipad-pro} {
+				margin-left: 0;
+				height: 35px;
+				width: 35px;
+			}
+			@media #{$ipad} {
+				margin-left: 0;
+				width: 30px;
+				height: 30px;
+			}
+			@media #{$phone} {
+				width: 20px;
+				height: 20px;
+				margin-left: 0;
+			}
+		}
+	}
+}
